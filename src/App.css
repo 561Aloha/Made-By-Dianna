@@ -1,12 +1,14 @@
 #root {
   margin: 0 auto;
   width: 100vw;
+  min-height: 100vh; 
   text-align: center;
   background-color: rgb(36, 36, 36);
 }
-.intro, .main-head{
+#intro canvas {
   pointer-events: none;
 }
+
 .main-head {
   position: relative; 
   z-index: 1;
@@ -279,8 +281,10 @@
 }
 
 
-@media (max-width:600px) {
-  .button-grp{
-    width: 100%;
-  }
+.button-grp{
+  background-color: aqua;
+}
+
+.button-grp a{
+  pointer-events: auto;
 }

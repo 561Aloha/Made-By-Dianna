@@ -68,3 +68,15 @@ button:focus-visible {
 }
 
 
+.app-content {
+  pointer-events: auto; 
+}
+
+canvas, .app-container{
+  pointer-events: none; 
+}
+.app-container{
+  overflow-x: hidden;
+  overflow-y: auto; 
+
+}
