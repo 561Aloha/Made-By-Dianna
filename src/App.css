@@ -45,7 +45,6 @@
   font-size: 48px;
 }
 .button-grp button{
-  
   margin-right: 10px;
   margin-top: 32px;
   color: black;
@@ -279,3 +278,9 @@
   }
 }
 
+
+@media (max-width:600px) {
+  .button-grp{
+    width: 100%;
+  }
+}
