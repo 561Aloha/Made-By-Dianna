@@ -281,10 +281,6 @@
 }
 
 
-.button-grp{
-  background-color: aqua;
-}
-
 .button-grp a{
   pointer-events: auto;
 }
