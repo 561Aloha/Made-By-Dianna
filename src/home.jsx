@@ -1,4 +1,4 @@
-import Intro from './intro';
+// import Intro from './intro';
 import Featured from './featured';
 import Tech from './tech';
 
@@ -47,7 +47,7 @@ function Home() {
                 /> 
       <div className="home-content" ref={containerRef}>
                  
-        <Intro />
+        {/* <Intro /> */}
         <Featured />
         <Tech />
 
