@@ -87,14 +87,6 @@
     align-items: center;
     width: 80%;
   }
-
-  .techstack{
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    margin-bottom: 0;
-  }
-
   .rightProj{
     width: 50%;
     margin-left: 48px;
@@ -105,7 +97,6 @@
       border-radius: 12px;
       object-fit:cover;
   }
-  
 
   .leftProj{
     width: 100%;
@@ -149,10 +140,6 @@
 .rightProj img{
   width: 100%;
 }
-
-
-
-
 
 /* ***********/
 .x {
@@ -214,3 +201,12 @@
   opacity: 1;
 }
 
+
+
+@media (max-width: 400px) {
+  .techstack{
+    gap: 5px;
+    width: 100%;
+
+  }
+}

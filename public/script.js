@@ -1429,7 +1429,7 @@ window.initFluidSimulation = function(canvas, listenerTarget = canvas){
     });
 
     listenerTarget.addEventListener('touchstart', e => {
-        e.preventDefault();
+
         const touches = e.targetTouches;
         while (touches.length >= pointers.length)
             pointers.push(new pointerPrototype());
@@ -1441,7 +1441,7 @@ window.initFluidSimulation = function(canvas, listenerTarget = canvas){
     });
 
     listenerTarget.addEventListener('touchmove', e => {
-        e.preventDefault();
+
         const touches = e.targetTouches;
         for (let i = 0; i < touches.length; i++) {
             let pointer = pointers[i + 1];
