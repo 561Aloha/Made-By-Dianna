@@ -1,7 +1,7 @@
 import React, { useState,useEffect} from "react";
 import {useRoutes, useNavigate, useLocation, Link} from 'react-router-dom';
 import first  from './assets/placeholder.jpeg';
-import './app.css';
+import './App.css';
 import instagram from "./assets/instagram-b.png"
 import linkedin from "./assets/linkedin-b.png"
 import github from "./assets/github-b.png"
