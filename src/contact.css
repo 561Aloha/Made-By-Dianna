@@ -1,0 +1,117 @@
+.styled-contact-form {
+  max-width: 600px;
+  margin: 4rem auto;
+  padding: 2rem;
+  color: #1c1c1c;
+  background: #eaeaec;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); 
+  border: 1px solid rgba(255, 255, 255, 0.1); 
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+
+}
+
+.styled-contact-form h1,
+.styled-contact-form h2 {
+  font-weight: 500;
+  font-size: 2rem;
+  margin: 2rem 0 1rem;
+}
+
+.styled-contact-form label {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  margin: 1.5rem 0 0.5rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.styled-contact-form .optional {
+  color: #aaa;
+}
+
+.styled-contact-form input,
+.styled-contact-form textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #333;
+  background: transparent;
+  padding: 0.6rem 0;
+  font-size: 1rem;
+  color: #1c1c1c;
+  font-family: inherit;
+  transition: border-color 0.3s;
+}
+
+.styled-contact-form input:focus,
+.styled-contact-form textarea:focus {
+  outline: none;
+  border-bottom: 1px solid #000;
+}
+
+.styled-contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.required {
+  color: crimson;
+}
+
+.styled-contact-form button {
+  margin-top: 2rem;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  background: #1c1c1c;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.styled-contact-form button:hover {
+  background: #000;
+
+}
+
+.entire{
+    height: auto;
+    animation: gradientFlow 10s ease infinite alternate;
+    background-size: 100% 100%;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-image:
+      radial-gradient(18% 28% at 24% 50%, #CEFAFF 7%, #073AFF00 100%),
+      radial-gradient(30% 40% at 18% 71%, #FFBBEC 6%, #073AFF00 100%),
+      radial-gradient(70% 53% at 36% 76%, #73F2FF 0%, #073AFF00 100%),
+      radial-gradient(42% 53% at 15% 94%, #FFFFFF 7%, #073AFF00 100%),
+      radial-gradient(42% 53% at 34% 72%, #FFFFFF 7%, #073AFF00 100%),
+      radial-gradient(18% 28% at 35% 87%, #FFFFFF 7%, #073AFF00 100%),
+      radial-gradient(31% 43% at 7% 98%, #FFFFFF 24%, #073AFF00 100%),
+      radial-gradient(21% 37% at 72% 23%, #D3FF6D9C 24%, #073AFF00 100%),
+      radial-gradient(35% 56% at 91% 74%, #8A4FFF 9%, #073AFF00 100%),
+      radial-gradient(74% 86% at 67% 38%, #6DFFAE 24%, #073AFF00 100%),
+      linear-gradient(125deg, #4EB5FF 1%, #4C00FC 100%);
+  }
+
+  
+
+@keyframes gradientFlow {
+    0% {
+      background-position: 0% 0%;
+      filter: hue-rotate(0deg);
+    }
+    50% {
+      background-position: 20% 30%;
+      filter: hue-rotate(90deg);
+    }
+    100% {
+      background-position: 0% 0%;
+      filter: hue-rotate(180deg);
+    }
+  }
+
+.entire{
+  padding-bottom: 20px;
+}

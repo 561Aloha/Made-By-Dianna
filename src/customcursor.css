@@ -1,0 +1,13 @@
+.cursor-circle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.3); /* Customize as needed */
+    pointer-events: none;
+    z-index: 99999; /* super high to stay on top */
+    transition: transform 0.1s ease;
+  }
+  

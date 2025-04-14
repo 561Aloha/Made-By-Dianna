@@ -1,0 +1,281 @@
+#root {
+  margin: 0 auto;
+  width: 100vw;
+  text-align: center;
+  background-color: rgb(36, 36, 36);
+}
+.intro, .main-head{
+  pointer-events: none;
+}
+.main-head {
+  position: relative; 
+  z-index: 1;
+  background-color: transparent; 
+  width: 50%;
+  padding: 48px;
+  margin-top: 48px;
+  text-align: left;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+.card {
+  padding: 2em;
+}
+.main-head h4{
+  padding:0;
+  margin: 0;
+  line-height: 0;
+  font-size: 18px;
+}
+.main-head h2{
+  line-height: 0;
+  font-size: 48px;
+}
+.button-grp button{
+  
+  margin-right: 10px;
+  margin-top: 32px;
+  color: black;
+  color: white;
+  border: #ffffff 1px solid;
+}
+
+.tech{
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.tech h4{
+  padding:0;
+  margin:0;
+  line-height: normal;
+  margin-top: 40px;
+}
+.tech h2{
+  font-size: 36px;
+  margin: auto;
+  text-align: center;
+  color: #ddd;
+}
+.tech-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  width: 70%;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.tech-item {
+  background-color: #ddd;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #000;
+  white-space: nowrap;
+}
+/* 
+.cursor-overlay {
+  position: relative;
+  z-index: 0;
+}
+
+.cursor-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.05s ease;
+} 
+  
+
+#intro{
+  height: 80vh;
+  position: relative;
+  width: 100%;
+  object-fit: cover;
+  padding: 0;
+  margin: 0;  
+  }
+  
+
+#intro canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  display: block;
+
+} */
+
+.social {
+  margin-top: 24px;
+  display: flex;
+  padding: 4px;
+  align-items: center;
+  justify-content: center;
+  justify-content: flex-start;
+  filter: invert(90)
+}
+.hello a{
+  color: white;
+}
+
+.hello {
+  width: 50%;
+  font-size: 18px;
+  text-align: right;
+  justify-content: center;
+  align-items: flex-end;
+  padding-right: 40px;
+}
+
+.column-b,.hello {
+  display: flex;
+  flex-direction: column;
+}
+.column-b{
+  line-height: 100%;
+  width: 50%;
+  padding:20px;
+  padding-left: 40px;
+}
+
+.column-b h2{
+  font-size: 32px;
+  margin: 0;
+  padding-top: 40px;
+  padding-bottom: 12px;
+}
+.column-b h4{
+  width: 70%;
+  font-weight: 600;
+}
+.hello, .column-b{
+  height: 250px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+@media (max-width:800px) {
+
+  #intro{
+    position: "relative";
+    width: 100%;
+  }
+
+  .column-b{
+    background-color: rgb(4, 5, 5);
+  }
+  .column-b h2{
+    font-size: 24px;
+  }
+  .together{
+    padding: 0;
+  }
+  .column-b h4{
+    font-weight: 400;
+    width: 80%;
+    margin-bottom: 10px;
+  }
+  .social {
+      margin-top: 24px;
+      display:flex;
+      padding: 1px;
+      padding:0;
+      align-items:flex-end;
+      justify-content:end;
+      justify-content: flex-end;
+    }
+    .hello{
+      display: none;
+    }
+    .column-b{
+      width: 100%;
+    }
+    .column-b h4{
+      padding: 0;
+      margin:10;
+    }
+    .column-b h4:last-child{
+      margin-top:10px;
+    }
+    .column-b{
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+}
+
+.fluid-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity .5s ease-out, transform 1s ease-out;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fadde-up {
+  opacity: 0;
+  filter: blur(10px);
+  transition: opacity .5s ease-out, transform .5s ease-out, filter .5s ease-out;
+}
+
+.fadde-up.show {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+
+
+
+@media (max-width:800px){
+
+  .main-head h2{
+    font-size: 36px;
+    width: 70vw;
+  }
+  .button-grp button{
+    padding: 10px;
+    background-color: black;
+  }
+}
+

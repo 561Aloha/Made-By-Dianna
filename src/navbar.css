@@ -1,0 +1,124 @@
+
+.nav-title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+.menu-items{
+    font-size: 18px;
+    pointer-events: auto;
+    padding: 10px 10px;
+  }
+
+.hamburger{
+    filter: invert(1);
+    width: 30px;
+    transition: transform 0.3s ease;
+  }
+.hamburger-container{
+    display:none;
+    cursor: pointer;
+    z-index: 111;
+  }
+  
+.hamburger-container.open .hamburger {
+    transform: rotate(90deg);
+  }
+  
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    display: none;
+  }
+  
+.menu-overlay ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+  }
+  
+.menu-overlay li {
+    margin: 20px 0;
+  }
+.menu-overlay a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+.menu-overlay a:hover {
+    color: #0015ff;
+  }
+.menu-items a{
+    font-size: 15px;
+    padding: 10px;
+    background-color: #0015ff;
+    margin-left: 10px;
+    border-radius: 12px;
+}
+.navbar img {
+    width: 48px;
+    height: 48px;
+    background-color: #ffffff;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 1px solid white;
+  }
+.menu-items {
+    display: flex;
+    align-items: center;
+    padding:0;
+    margin-left: 10px;
+    border-radius: 15px;
+    border: 1px solid white;
+  }
+  
+.menu-items a:hover {
+    font-size: 15px;
+    margin-left: 10px;
+    background-color: #2a2a2a;
+    border-radius: 12px;
+    color: white;
+    padding:13px;
+    /* border:white 1px solid; */
+    text-decoration: none;
+  }  
+.menu-items a{
+    font-size: 15px;
+    margin-left: 10px;
+    background-color: transparent;
+    border-radius: 12px;
+    color: white;
+    padding:13px;
+    /* border:white 1px solid; */
+    text-decoration: none;
+  }
+
+
+.button-grp{
+    margin-bottom: 75px;
+}
+
+.navbar {
+  display: flex;
+  height: 50px; 
+  justify-content: space-between;
+  width: 20%;
+  margin-left: 25px;
+  align-items: center;
+  color: black;
+  z-index: 100; 
+  top: 0;
+  padding: 0 20px;
+  height: 70px; /* slightly more height for space */
+}
+
+
