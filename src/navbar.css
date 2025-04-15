@@ -122,3 +122,9 @@
 }
 
 
+@media (max-width: 400px){
+ .navbar{
+  margin-left: 12px;
+ }
+ 
+}

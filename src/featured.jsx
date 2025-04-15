@@ -50,7 +50,7 @@ function Featured() {
             {/* Other Projects */}
             <div className="proj-section">
                 <h3>Other Projects</h3>
-                <Link to='/projects'><button>View All</button></Link>
+                <Link to="/projects"><button>View All</button></Link>
             </div>
             <div className="x">
                 <div className="box">

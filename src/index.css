@@ -80,3 +80,8 @@ canvas, .app-container{
   overflow-y: auto; 
 
 }
+
+
+button {
+  pointer-events: auto;
+}

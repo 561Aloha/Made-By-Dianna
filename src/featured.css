@@ -146,16 +146,22 @@
   display: flex;
   overflow-x: scroll;
   overflow-y: hidden;
-
   width: 90%;
   margin: 0 auto;
   justify-content: space-between;
   -ms-overflow-style: none;  
-  scrollbar-width: none;     
+  scrollbar-width: none;  
+  
+  flex-wrap: nowrap;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 .x::-webkit-scrollbar {
   display: none;  
 }
+
 .box:first-child{
   margin-left: 0;
 }

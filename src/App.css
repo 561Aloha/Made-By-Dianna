@@ -284,3 +284,19 @@
 .button-grp a{
   pointer-events: auto;
 }
+
+
+
+@media (max-width: 400px){
+  .navbar{
+   margin-left: 12px;
+  }
+  .main-head{
+    margin-left: 12px;
+  }
+  .intro{
+    margin-left: 0px;
+
+  }
+  
+ }
