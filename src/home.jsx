@@ -9,8 +9,10 @@ import Footer from './footer';
 
 
 function Home() {
+    const featuredRef = useRef(null);
     const containerRef = useRef(null);
     const canvasRef = useRef(null);
+
         useEffect(() => {
             const fluidScript = document.createElement('script');
             fluidScript.src = '/script.js';
@@ -29,34 +31,32 @@ function Home() {
                 }
             };
         }, []);
-      
-  return (
-    <div className="home-background" ref={containerRef}>
 
-              <canvas
-                className="fluid-canvas"
-                ref={canvasRef}
-                style={{
-                    position: 'fixed',
-                    top: 0,
-                    left: 0,
-                    width: '100%',
-                    height: '100%',
-                    zIndex: -1,
-                    pointerEvents: 'auto',
-                }}
-                /> 
-      <div className="home-content" ref={containerRef}>
-                 
-      <section className="intro-section">
-        <Intro />
-      </section>
-      <section className="featured-section" id="featured">
-        <Featured />
+      
+ return (
+    <div className="home-background" ref={containerRef}>
+      <canvas
+        className="fluid-canvas"
+        ref={canvasRef}
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          zIndex: -1,
+          pointerEvents: 'auto',
+        }}
+      />
+      <div className="home-content">
+        <section className="intro-section">
+          <Intro featuredRef={featuredRef} />
+        </section>
+        <section className="featured-section" id="featured" ref={featuredRef}>
+          <Featured />
         </section>
         <Tech />
-
-        <Footer/>
+        <Footer />
       </div>
     </div>
   );
