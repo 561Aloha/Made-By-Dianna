@@ -120,8 +120,6 @@
     margin-bottom: 5px;
 }
 
-
-
 .together {
     background-color: transparent;
     display: flex;
@@ -152,9 +150,9 @@
 .together img {
     padding: 0;
     margin: 0;
-    height: 12px;
+    height: 24px;
     transition: transform 0.2s ease 0.1s; 
-    width: 12px; /* Set proportional width */
+    width: 24px; /* Set proportional width */
     margin-left: 30px; /* Add spacing between text and icon */
 }
 
@@ -264,9 +262,9 @@
     .proj-intro{
         background: #262626;
         box-shadow: 0;
-        
+        width: 90%;
     }
     .proj-intro h1, .proj-intro h4, .proj-intro h3{
-        width: 70%;
+        width: 100%;
     }
 }

@@ -83,16 +83,24 @@ function Intro() {
                 <>
                     <div
                         className="swipe-zone"
-                        onTouchStart={() => {
-                            const featuredSection = document.getElementById('featured');
-                            if (featuredSection) {
-                                featuredSection.scrollIntoView({ behavior: 'smooth' });
+                        onTouchStart={(e) => (window._touchStartY = e.touches[0].clientY)}
+                        onTouchEnd={(e) => {
+                            const endY = e.changedTouches[0].clientY;
+                            const diffY = window._touchStartY - endY;
+                            if (diffY > 50) {
+                                // User swiped up
+                                const featuredSection = document.getElementById('featured');
+                                if (featuredSection) {
+                                    featuredSection.scrollIntoView({ behavior: 'smooth' });
+                                }
                             }
                         }}
                     />
                     <div className="scroll-hint">Swipe up ↓</div>
                 </>
             )}
+
+
         </div>
     );
 }
