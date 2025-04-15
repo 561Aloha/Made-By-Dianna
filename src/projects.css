@@ -166,8 +166,6 @@
     height: 100px;
 }
 
-
-
 @media (max-width: 1500px) {
     .projects-list {
         grid-template-columns: repeat(3, 1fr);
@@ -189,9 +187,6 @@
 
     }
 }
-
-
-
 
 
 @media (max-width:700px){
@@ -264,7 +259,13 @@
     .fluid-canvas{
         height: 80vh;
     }
-    .home-background {
+    /* .home-background {
         background-color: #3a86ff;
+    } */
+    .entire-page{
+        background: #262626;
+        box-shadow: 0;
+        width:100%
     }
+
 }

@@ -7,11 +7,17 @@ function Intro() {
     const sectionRef = useRef(null);
     const canvasRef = useRef(null);
     const containerRef = useRef(null);
-    
+    const [isMobile, setIsMobile] = useState(false);
     const [showButtons, setShowButtons] = useState(false);
     const [showWelcome, setShowWelcome] = useState(false);
     const [showMadeBy, setShowMadeBy] = useState(false);
-
+    useEffect(() => {
+        const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+    
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
@@ -29,6 +35,29 @@ function Intro() {
         return () => observer.disconnect();
     }, []);
 
+    useEffect(() => {
+        if (!isMobile) return;
+      
+        const handleScroll = () => {
+          const scrollY = containerRef.current.scrollTop;
+          const height = containerRef.current.scrollHeight - containerRef.current.clientHeight;
+      
+          if (scrollY / height > 0.9) {
+            const featuredSection = document.getElementById('featured');
+            if (featuredSection) {
+              featuredSection.scrollIntoView({ behavior: 'smooth' });
+            }
+          }
+        };
+      
+        const currentRef = containerRef.current;
+        if (currentRef) currentRef.addEventListener('scroll', handleScroll);
+      
+        return () => {
+          if (currentRef) currentRef.removeEventListener('scroll', handleScroll);
+        };
+      }, [isMobile]);
+      
     useEffect(() => {
         const fluidScript = document.createElement('script');
         fluidScript.src = '/script.js';
@@ -51,6 +80,22 @@ function Intro() {
     return (
         <div id="intro" ref={containerRef} className="intro">
             <NavBar />
+            {isMobile && (
+                <canvas
+                    className="fluid-canvas"
+                    ref={canvasRef}
+                    style={{
+                    position: 'fixed',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    zIndex: -1,
+                    pointerEvents: 'auto',
+                    }}
+                />
+                )}
+
             <div className="main-head" ref={sectionRef}>
                 <h4 className={`fade-up ${showWelcome ? 'show' : ''}`}>Welcome to</h4>
                 <h2 className={`fade-up ${showMadeBy ? 'show' : ''}`}>Made by Dianna</h2>

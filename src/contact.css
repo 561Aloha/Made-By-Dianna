@@ -115,3 +115,11 @@
 .entire{
   padding-bottom: 20px;
 }
+
+
+
+@media (max-width:400px) {
+  .styled-contact-form {
+    margin: 12px;
+  }
+}
