@@ -72,16 +72,16 @@ function Featured() {
                     <h4>eNurse</h4>
                     <p>This is a Java based application, where adminstators and nurses manage shifts</p>   </div>
                 </div>
-                <div className="box">
+                {/* <div className="box">
                     <img src={portfolio} alt="Portfolio" />
                     <div className="box-text"><h4>Portfolio One</h4>
                     <p>This is a description of the project</p>     </div>
-                </div>
+                </div> */}
                 <div className="box">
-                    <Link to='https://github.com/561Aloha/CryptoHustle'><img src={spotify} alt="Spotify Clone" /></Link>
+                    <Link to='https://www.figma.com/slides/Bzbavt4OouWH6zYyLjbPau/Spotify?t=yIxfio1MyWTyZpgc-0'><img src={spotify} alt="Spotify Clone" /></Link>
                     <div className="box-text">
-                    <h4>Spotify</h4>
-                    <p>This is a description of the project</p></div>
+                    <h4>Spotify Redesign Presentation</h4>
+                    <p>This contains a high fidelity mockups of introducing a new feature on spotify</p></div>
                 </div>
             </div>
 

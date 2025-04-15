@@ -265,7 +265,9 @@
     .entire-page{
         background: #262626;
         box-shadow: 0;
-        width:100%
+        width:80%
     }
-
+    .proj-intro h1, .proj-intro h4, .proj-intro h3{
+        width: 70%;
+    }
 }

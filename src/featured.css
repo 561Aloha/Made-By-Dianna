@@ -213,6 +213,8 @@
   .techstack{
     gap: 5px;
     width: 100%;
-
+  }
+  .proj-section h3{
+    font-size: 24px;
   }
 }

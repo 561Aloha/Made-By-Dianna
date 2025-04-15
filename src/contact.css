@@ -121,5 +121,11 @@
 @media (max-width:400px) {
   .styled-contact-form {
     margin: 12px;
+    max-width: 350px;
   }
+
+}
+
+.styled-contact-form{
+  width: 80%;
 }

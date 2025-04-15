@@ -20,10 +20,10 @@ function Footer() {
         </div>
 
         <div className="hello">
-            <Link to="/">Home</Link>
+            {/* <Link to="/">Home</Link>
             <Link to="/projects">Software Projects</Link>
             <Link to="/uxdesign">UX Projects</Link>
-            <Link to="/contact">Contact</Link>
+            <Link to="/contact">Contact</Link> */}
             <div className="social">
                 <img src={instagram}></img>
                 <img src={linkedin}></img>
