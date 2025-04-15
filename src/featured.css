@@ -151,12 +151,10 @@
   justify-content: space-between;
   -ms-overflow-style: none;  
   scrollbar-width: none;  
-  
-  flex-wrap: nowrap;
+  z-index: 3;
   -webkit-overflow-scrolling: touch;
   touch-action: pan-x;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+
 }
 .x::-webkit-scrollbar {
   display: none;  
@@ -217,4 +215,5 @@
   .proj-section h3{
     font-size: 24px;
   }
+
 }

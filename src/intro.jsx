@@ -5,7 +5,6 @@ import { NavBar } from './App.jsx';
 
 function Intro() {
     const sectionRef = useRef(null);
-    const canvasRef = useRef(null);
     const containerRef = useRef(null);
     const [isMobile, setIsMobile] = useState(false);
     const [showButtons, setShowButtons] = useState(false);
@@ -62,46 +61,12 @@ function Intro() {
         };
     }, [isMobile]);
 
-    // Load fluid simulation only on mobile
-    useEffect(() => {
-        if (!isMobile) return;
 
-        const fluidScript = document.createElement('script');
-        fluidScript.src = '/script.js';
-        fluidScript.async = true;
-
-        fluidScript.onload = () => {
-            if (window.initFluidSimulation && canvasRef.current && containerRef.current) {
-                window.initFluidSimulation(canvasRef.current, containerRef.current);
-            }
-        };
-
-        document.body.appendChild(fluidScript);
-        return () => {
-            if (document.body.contains(fluidScript)) {
-                document.body.removeChild(fluidScript);
-            }
-        };
-    }, [isMobile]);
 
     return (
-        <div id="intro" ref={containerRef} className="intro">
+        <div id="intro" ref={containerRef} className={`intro ${isMobile ? 'mobile-intro' : ''}`}>
             <NavBar />
-            {isMobile && (
-                <canvas
-                    className="fluid-canvas"
-                    ref={canvasRef}
-                    style={{
-                        position: 'fixed',
-                        top: 0,
-                        left: 0,
-                        width: '100%',
-                        height: '100%',
-                        zIndex: -1,
-                        pointerEvents: 'auto',
-                    }}
-                />
-            )}
+
 
             <div className="main-head" ref={sectionRef}>
                 <h4 className={`fade-up ${showWelcome ? 'show' : ''}`}>Welcome to</h4>
@@ -114,6 +79,20 @@ function Intro() {
                     <Link to='https://linkedin.com/in/DiannaD'><button>Get in Touch</button></Link>
                 </div>
             </div>
+            {isMobile && (
+                <>
+                    <div
+                        className="swipe-zone"
+                        onTouchStart={() => {
+                            const featuredSection = document.getElementById('featured');
+                            if (featuredSection) {
+                                featuredSection.scrollIntoView({ behavior: 'smooth' });
+                            }
+                        }}
+                    />
+                    <div className="scroll-hint">Swipe up ↓</div>
+                </>
+            )}
         </div>
     );
 }

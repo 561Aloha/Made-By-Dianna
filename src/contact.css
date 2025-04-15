@@ -118,14 +118,20 @@
 
 
 
-@media (max-width:400px) {
-  .styled-contact-form {
+@media (max-width:600px) {
+
+  .styled-contact-form{
+    width: 80%;
+    margin: 0 auto;
     margin: 12px;
-    max-width: 350px;
+    max-width: 325px;
+  }
+  .styled-contact-form h1,
+  .styled-contact-form h2 {
+
+    font-size: 1rem;
   }
 
+
 }
 
-.styled-contact-form{
-  width: 80%;
-}

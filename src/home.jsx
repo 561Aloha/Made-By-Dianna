@@ -48,10 +48,10 @@ function Home() {
                 /> 
       <div className="home-content" ref={containerRef}>
                  
-      <section className="intro-section" >
+      <section className="intro-section">
         <Intro />
       </section>
-      <section  className="featured-section" id="featured">
+      <section className="featured-section" id="featured">
         <Featured />
         </section>
         <Tech />

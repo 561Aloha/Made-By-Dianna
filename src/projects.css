@@ -1,7 +1,6 @@
 .entire-page{
     margin: 0 auto;
     color: black;
-
     background: #262626;
     box-shadow:  20px 20px 60px #202020,
                 -20px -20px 60px #2c2c2c;
@@ -262,10 +261,10 @@
     /* .home-background {
         background-color: #3a86ff;
     } */
-    .entire-page{
+    .proj-intro{
         background: #262626;
         box-shadow: 0;
-        width:80%
+        
     }
     .proj-intro h1, .proj-intro h4, .proj-intro h3{
         width: 70%;
