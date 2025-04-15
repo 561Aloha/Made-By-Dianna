@@ -60,7 +60,7 @@ function Intro() {
                 </p>
                 <div className={`button-grp fade-up ${showButtons ? 'show' : ''}`}>
                     <Link to='https://linkedin.com/in/DiannaD'><button>Get in Touch</button></Link>
-                    <button>My Resume</button>
+
                 </div>
             </div>
         </div>
