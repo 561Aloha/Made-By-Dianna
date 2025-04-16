@@ -156,6 +156,8 @@
   touch-action: pan-x;
 
 }
+
+
 .x::-webkit-scrollbar {
   display: none;  
 }
@@ -205,8 +207,6 @@
   opacity: 1;
 }
 
-
-
 @media (max-width: 400px) {
   .techstack{
     gap: 5px;
@@ -217,3 +217,31 @@
   }
 
 }
+
+.x {
+
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  gap: 16px;
+  padding: 16px;
+  width: 100%;
+  box-sizing: border-box;
+
+  /* Hide scrollbar (optional) */
+  scrollbar-width: none; /* Firefox */
+}
+.x::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+.box {
+  flex: 0 0 auto; /* ✅ don't shrink, keep width */
+  width: 350px;   /* or whatever width you want */
+  height: auto;   /* or fixed height if preferred */
+  background: #222;
+  border-radius: 12px;
+  padding: 16px;
+  scroll-snap-align: start;
+}
+

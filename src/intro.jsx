@@ -107,19 +107,12 @@ function Intro({featuredRef}) {
                     onClick={() => {
                         if (featuredRef?.current) {
                         featuredRef.current.scrollIntoView({ behavior: 'smooth' });
-                        document.body.style.overflow = 'auto';
+                            document.body.style.overflow = 'auto';
                         }
                     }}
                     >
                     press me ↓
                     </div>
-                    <div className={`button-grp fade-up ${showButtons ? 'show' : ''}`}>
-                    <Link to='https://linkedin.com/in/DiannaD'>
-                        <button>Get in Touch</button>
-                    </Link>
-
-</div>
-
                 </div>
                 )}
 
