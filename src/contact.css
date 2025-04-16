@@ -120,16 +120,25 @@
 
 @media (max-width:600px) {
 
+  .entire{
+    width: 100%;
+  }
   .styled-contact-form{
     width: 80%;
     margin: 0 auto;
     margin: 12px;
-    max-width: 325px;
+    max-width: 300px;
   }
   .styled-contact-form h1,
   .styled-contact-form h2 {
 
-    font-size: 1rem;
+    font-size: 1.25rem;
+  }
+  .styled-contact-form {
+    margin: 2rem auto;
+    padding: 1rem;
+
+  
   }
 
 

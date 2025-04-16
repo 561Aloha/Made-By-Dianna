@@ -46,7 +46,7 @@
 .learnBtn{
     display: flex;
     flex-direction: row;
-    width: 40%;
+    width: 60%;
     height: 40px;
     align-items: center;
     margin-bottom: 20px;

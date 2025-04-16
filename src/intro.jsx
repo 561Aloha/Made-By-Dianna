@@ -3,7 +3,7 @@ import './App.css';
 import { Link } from "react-router-dom";
 import { NavBar } from './App.jsx'; 
 
-function Intro() {
+function Intro({featuredRef}) {
     const sectionRef = useRef(null);
     const containerRef = useRef(null);
     const [isMobile, setIsMobile] = useState(false);
@@ -66,8 +66,6 @@ function Intro() {
     return (
         <div id="intro" ref={containerRef} className={`intro ${isMobile ? 'mobile-intro' : ''}`}>
             <NavBar />
-
-
             <div className="main-head" ref={sectionRef}>
                 <h4 className={`fade-up ${showWelcome ? 'show' : ''}`}>Welcome to</h4>
                 <h2 className={`fade-up ${showMadeBy ? 'show' : ''}`}>Made by Dianna</h2>
@@ -82,17 +80,29 @@ function Intro() {
             {isMobile && (
                 <>
                     <div
-                        className="swipe-zone"
-                        onTouchStart={() => {
-                            const featuredSection = document.getElementById('featured');
-                            if (featuredSection) {
-                                featuredSection.scrollIntoView({ behavior: 'smooth' });
-                            }
-                        }}
+                    className="swipe-zone"
+                    onTouchStart={(e) => (window._touchStartY = e.touches[0].clientY)}
+                    onTouchEnd={(e) => {
+                        const endY = e.changedTouches[0].clientY;
+                        const diffY = window._touchStartY - endY;
+                        if (diffY > 50 && featuredRef?.current) {
+                        featuredRef.current.scrollIntoView({ behavior: 'smooth' });
+                        }
+                    }}
                     />
-                    <div className="scroll-hint">Swipe up ↓</div>
+                    <div
+                    className="scroll-hint"
+                    onClick={() => {
+                        if (featuredRef?.current) {
+                        featuredRef.current.scrollIntoView({ behavior: 'smooth' });
+                        }
+                    }}
+                    >
+                    Swipe up ↓
+                    </div>
                 </>
-            )}
+                )}
+
         </div>
     );
 }
