@@ -4,7 +4,7 @@ import Tech from './tech';
 
 import React, { useEffect, useRef, useState } from "react";
 
-import './projects.css';
+import './intro.css';
 import Footer from './footer';
 
 
@@ -36,17 +36,7 @@ function Home() {
  return (
     <div className="home-background" ref={containerRef}>
       <canvas
-        className="fluid-canvas"
-        ref={canvasRef}
-        style={{
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          zIndex: -1,
-          pointerEvents: 'auto',
-        }}
+        className="home-fluid-canvas" ref={canvasRef}
       />
       <div className="home-content">
         <section className="intro-section">

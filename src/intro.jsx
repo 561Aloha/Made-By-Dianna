@@ -61,6 +61,16 @@ function Intro({featuredRef}) {
         };
     }, [isMobile]);
 
+    useEffect(() => {
+        if (isMobile) {
+          document.body.style.overflow = 'hidden';
+        }
+      
+        return () => {
+          document.body.style.overflow = 'auto'; // restore when unmounted
+        };
+      }, [isMobile]);
+      
 
 
     return (
@@ -78,29 +88,39 @@ function Intro({featuredRef}) {
                 </div>
             </div>
             {isMobile && (
-                <>
+                < div className="swipe">
                     <div
                     className="swipe-zone"
                     onTouchStart={(e) => (window._touchStartY = e.touches[0].clientY)}
                     onTouchEnd={(e) => {
-                        const endY = e.changedTouches[0].clientY;
-                        const diffY = window._touchStartY - endY;
-                        if (diffY > 50 && featuredRef?.current) {
+                    const endY = e.changedTouches[0].clientY;
+                    const diffY = window._touchStartY - endY;
+                    if (diffY > 50 && featuredRef?.current) {
                         featuredRef.current.scrollIntoView({ behavior: 'smooth' });
-                        }
+                        document.body.style.overflow = 'auto'; // ✅ unlock scroll
+                    }
                     }}
+
                     />
                     <div
                     className="scroll-hint"
                     onClick={() => {
                         if (featuredRef?.current) {
                         featuredRef.current.scrollIntoView({ behavior: 'smooth' });
+                        document.body.style.overflow = 'auto';
                         }
                     }}
                     >
-                    Swipe up ↓
+                    press me ↓
                     </div>
-                </>
+                    <div className={`button-grp fade-up ${showButtons ? 'show' : ''}`}>
+                    <Link to='https://linkedin.com/in/DiannaD'>
+                        <button>Get in Touch</button>
+                    </Link>
+
+</div>
+
+                </div>
                 )}
 
         </div>
