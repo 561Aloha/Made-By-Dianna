@@ -1,0 +1,191 @@
+/****************     *******************/
+
+#intro canvas {
+    pointer-events: none;
+  }
+.main-head {
+    position: relative; 
+    z-index: 1;
+    background-color: transparent; 
+    width: 50%;
+    padding: 48px;
+    margin-top: 48px;
+    text-align: left;
+  }
+.main-head h4{
+    padding:0;
+    margin: 0;
+    line-height: 0;
+    font-size: 18px;
+  }
+.main-head h2{
+    line-height: 0;
+    font-size: 48px;
+  }
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity .5s ease-out, transform 1s ease-out;
+  }
+  
+.fade-up.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+.fadde-up {
+    opacity: 0;
+    filter: blur(10px);
+    transition: opacity .5s ease-out, transform .5s ease-out, filter .5s ease-out;
+  }
+  
+.fadde-up.show {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+  
+.button-grp button{
+    margin-right: 10px;
+    margin-top: 32px;
+    color: black;
+    color: white;
+    border: #ffffff 1px solid;
+  }
+
+.fluid-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* height: 100%; */
+    z-index: 0;
+    pointer-events: none;
+}
+
+@media (max-width:800px){
+    #intro{
+      position: relative;
+      width: 100%;
+    }
+
+    .main-head h2{
+      font-size: 36px;
+      width: 70vw;
+    }
+
+    .button-grp button{
+      padding: 10px;
+      background-color: black;
+    }
+
+    .fluid-canvas {
+      height: 80vh;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+}
+
+@media (max-width: 400px){
+    .navbar{
+     margin-left: 12px;
+    }
+    .main-head{
+      margin-left: 0;
+      width: 80%;
+    }
+    .intro{
+      margin-left: 0px;
+  
+    }
+    .tech-grid{
+      width: 80%;
+    }
+    .button-grp{
+      margin-top: 12px;
+    }
+    .button-grp button{
+      margin-top: 0;
+    }
+}  
+  
+.button-grp a{
+    pointer-events: auto;
+}
+
+.mobile-intro {
+    height: 70vh;
+    position: relative;
+    overflow: hidden;
+}
+  
+.swipe-zone {
+    position: absolute;
+    bottom: 0;
+    height: 30vh;
+    width: 100%;
+    background: transparent;
+    z-index: 10;
+}
+  
+.scroll-hint {
+    position: absolute;
+    bottom: 12px;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    color: #ffffffcc;
+    animation: fadeHint 2s infinite alternate;
+    z-index: 10;
+}
+
+
+
+
+
+/* 
+@media (max-width:400px) {
+    .fluid-canvas{
+        height: 80vh;
+    }
+
+} */
+
+@media (max-width: 768px) {
+    .intro {
+      height: auto;
+      overflow: visible;
+      position: relative;
+    }
+  
+    .fluid-canvas {
+      height: 80vh;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+  
+    .swipe-zone {
+      height: 20vh;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      z-index: 10;
+    }
+  
+    .scroll-hint {
+      position: absolute;
+      bottom: 16px;
+      width: 100%;
+      text-align: center;
+      color: white;
+      font-size: 16px;
+      z-index: 10;
+    }
+  }
+  
