@@ -1,7 +1,7 @@
 .entire-page{
     margin: 0 auto;
     color: black;
-    background: #262626;
+    background: #000000;
     box-shadow:  20px 20px 60px #202020,
                 -20px -20px 60px #2c2c2c;
         width:100vw;
@@ -172,7 +172,6 @@
 
     .project-card {
         padding: 20px;
-
     }
     
 }
@@ -181,7 +180,6 @@
         grid-template-columns: 1fr; 
         padding: 0;
         padding-top: 40px;
-
     }
 }
 
@@ -235,11 +233,14 @@
 
 @media (max-width:400px) {
     .proj-intro{
-        background: #262626;
+        background: #121212;
         box-shadow: 0;
         width: 90%;
     }
     .proj-intro h1, .proj-intro h4, .proj-intro h3{
         width: 100%;
+    }
+    .proj-intro, .projects-list, .multi-select{
+        margin-left: 32px;
     }
 }

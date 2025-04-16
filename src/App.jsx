@@ -1,5 +1,5 @@
 import {useRoutes, useNavigate, useLocation, Link} from 'react-router-dom';
-import React, { useState,useEffect} from "react";
+import React, { useState, useEffect} from "react";
 
 import './App.css';
 import './navbar.css';
@@ -52,7 +52,6 @@ export function Footer() {
 function App() {
     const element = useRoutes([
       { path: "/", element: <Home /> },
-      // { path: "/not-found", element: <NotFound /> },
       { path: "/projects", element: <Projects /> },
       { path: "/contact", element: <Contact /> },
 

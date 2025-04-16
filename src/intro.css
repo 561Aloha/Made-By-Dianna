@@ -135,12 +135,12 @@
     left: 0;
     z-index: -1;
   }
-
+/* 
   .mobile-intro {
       height: 70vh;
       position: relative;
       overflow: hidden;
-  }
+  } */
   .mobile-intro {
     position: fixed;
     top: 0;

@@ -8,7 +8,6 @@
   -webkit-backdrop-filter: blur(8px); 
   border: 1px solid rgba(255, 255, 255, 0.1); 
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
-
 }
 
 .styled-contact-form h1,
@@ -72,7 +71,6 @@
 
 .styled-contact-form button:hover {
   background: #000;
-
 }
 
 .entire{
@@ -81,7 +79,7 @@
     background-size: 100% 100%;
     background-position: 0 0;
     background-repeat: no-repeat;
-    background-image:
+    /* background-image:
       radial-gradient(18% 28% at 24% 50%, #CEFAFF 7%, #073AFF00 100%),
       radial-gradient(30% 40% at 18% 71%, #FFBBEC 6%, #073AFF00 100%),
       radial-gradient(70% 53% at 36% 76%, #73F2FF 0%, #073AFF00 100%),
@@ -92,10 +90,20 @@
       radial-gradient(21% 37% at 72% 23%, #D3FF6D9C 24%, #073AFF00 100%),
       radial-gradient(35% 56% at 91% 74%, #8A4FFF 9%, #073AFF00 100%),
       radial-gradient(74% 86% at 67% 38%, #6DFFAE 24%, #073AFF00 100%),
-      linear-gradient(125deg, #4EB5FF 1%, #4C00FC 100%);
+      linear-gradient(125deg, #4EB5FF 1%, #4C00FC 100%); */
+    background-image:
+      radial-gradient(18% 28% at 24% 50%, #CEFAFF 7%, #073AFF00 100%),
+      radial-gradient(30% 40% at 18% 71%, #1b1319 6%, #073AFF00 100%),
+      radial-gradient(70% 53% at 36% 76%, #596769 0%, #073AFF00 100%),
+      radial-gradient(42% 53% at 15% 94%, #FFFFFF 7%, #073AFF00 100%),
+      radial-gradient(42% 53% at 34% 72%, #FFFFFF 7%, #073AFF00 100%),
+      radial-gradient(18% 28% at 35% 87%, #FFFFFF 7%, #073AFF00 100%),
+      radial-gradient(31% 43% at 7% 98%, #FFFFFF 24%, #073AFF00 100%),
+      radial-gradient(21% 37% at 72% 23%, #575a519c 24%, #073AFF00 100%),
+      radial-gradient(35% 56% at 91% 74%, #3e3a47 9%, #073AFF00 100%),
+      radial-gradient(74% 86% at 67% 38%, #235238 24%, #073AFF00 100%),
+      linear-gradient(125deg, #112838 1%, #12003d 100%);
   }
-
-  
 
 @keyframes gradientFlow {
     0% {
@@ -116,10 +124,7 @@
   padding-bottom: 20px;
 }
 
-
-
 @media (max-width:600px) {
-
   .entire{
     width: 100%;
   }
@@ -131,16 +136,11 @@
   }
   .styled-contact-form h1,
   .styled-contact-form h2 {
-
     font-size: 1.25rem;
   }
   .styled-contact-form {
     margin: 2rem auto;
     padding: 1rem;
-
-  
   }
-
-
 }
 
