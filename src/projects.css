@@ -1,107 +1,128 @@
-.entire-page{
+/* General Page Styling */
+.entire-page {
     margin: 0 auto;
+    width: 100vw;
     color: black;
     background: #000000;
-    box-shadow:  20px 20px 60px #202020,
-                -20px -20px 60px #2c2c2c;
-        width:100vw;
+    box-shadow: 20px 20px 60px #202020, -20px -20px 60px #2c2c2c;
 }
 
+/* Multi-Select Section */
 .multi-select {
     display: flex;
     gap: 10px;
-    margin-bottom: 20px;
     width: 80vw;
     overflow: auto;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    color: white;
 }
 
+/* Multi-Select Buttons */
 .multi-select-button {
     padding: 10px 20px;
     border: 2px solid #ffffff;
-    color: rgb(194, 194, 194);
     border-radius: 5px;
     background-color: transparent;
+    color: rgb(194, 194, 194);
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
 }
 
-.multi-select-button.selected {
-    background-color:   #535bf2;
+.multi-select-button.selected,
+.multi-select-button:hover {
+    background-color: #535bf2;
     color: white;
 }
 
-.multi-select-button:hover{
-    background-color:  #535bf2;
-    color: white;
-}
-.multi-select{
-    padding-bottom: 20px;
-}
-.proj-intro, .multi-select{
-    width:80%;
+/* Project Intro Section */
+.proj-intro {
+    width: 80%;
     margin: 0 auto;
     color: white;
+    text-align: left;
 }
 
-.project-card img{
+.proj-intro h1,
+.proj-intro h2,
+.proj-intro h3,
+.proj-intro h4 {
+    margin-bottom: 5px;
+}
+
+.proj-intro h4 {
+    font-weight: 500;
+    width: 600px;
+    margin-top: 40px;
+    margin-bottom: 0;
+    padding-top: 0;
+}
+
+/* Project Card Styling */
+.project-card {
+    width: 320px;
+    padding: 20px;
+    background-color: #282525;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.project-card img {
     width: 200px;
     height: auto;
-}
-
-.project-list h2 {
-    font-size: 20px;
-}
- 
-.project-card {
-    background-color: #282525;
-    width: 30px;
-    padding: 20px;
-    margin: 10px; /* Spacing between project cards */
-    border: 2px solid #ffffff;
-    border-radius: 5px; /* Optional: Subtle background */
-    border-radius: 5px; /* Optional: Rounded corners */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .project-card h2 {
     font-size: 20px;
     color: white;
     margin: 10px 0;
-    line-height: .5;
+    line-height: 0.5;
 }
 
 .project-card h4 {
     font-size: 16px;
-    color: #a3a3a3; 
-    margin: 5px 0; 
+    color: #a3a3a3;
+    margin: 5px 0;
 }
 
 .project-card div {
     font-size: 16px;
-    line-height: 1.2; /* Spacing for the skills list */
-    color: #333; /* High contrast for readability */
-    margin-bottom: 10px; /* Space below skills */
+    color: #333;
+    line-height: 1.2;
+    margin-bottom: 10px;
 }
 
+/* Project Card Paragraph */
+.project-card p {
+    font-size: 13px;
+    font-weight: 400;
+    color: rgb(197, 197, 197);
+    height: 100px;
+}
+
+/* Skills Section */
 .skills {
     display: flex;
-    flex-wrap: wrap; 
-    gap: 8px; 
-    margin-top: 10px; /* Space above skills section */
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
 }
 
 .skill-badge {
-    background-color: #cbd7f8; /* Light background */
-    color: #333; /* Dark text for contrast */
-    padding: 5px 10px; /* Padding inside the badge */
-    border-radius: 8px; /* Rounded corners for rectangle look */
-    font-size: 14px; /* Adjust font size */
-    cursor: default; /* Disable pointer cursor */
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: default;
+    color: #333;
+    background-color: #cbd7f8;
 }
 
+/* Skill Colors */
 .skill-badge.React\.js { background-color: #3a86ff; color: #fff; }
 .skill-badge.Python { background-color: #8338ec; color: #fff; }
-.skill-badge.C\+\+ {    background-color: #ff006e; color: #fff; }
+.skill-badge.C\+\+ { background-color: #ff006e; color: #fff; }
 .skill-badge.Javascript { background-color: #fb5607; color: #fff; }
 .skill-badge.UXDesign { background-color: #ffbe0b; color: #fff; }
 .skill-badge.Java { background-color: #ff006a; color: #fff; }
@@ -109,58 +130,50 @@
 .skill-badge.mySQL { background-color: #f21160; color: #fff; }
 .skill-badge.APIdev { background-color: #8ec118; color: #fff; }
 
-.proj-intro h4{
-    font-weight: 500;
-    width: 600px;
-    margin-top: 40px;
-    margin-bottom: 0;
-    padding-top: 0;
-}
-.proj-intro h2{
-    margin-bottom: 5px;
-}
-
+/* Button Group */
 .together {
-    background-color: transparent;
     display: flex;
     margin: 0;
-    align-items: center;
-    justify-content: space-between;
-    text-align: left;
     align-items: stretch;
-  }
+    justify-content: space-between;
+    background-color: transparent;
+    text-align: left;
+}
 
 .together button {
-    display: flex; 
+    display: flex;
     align-items: center;
+    height: 35px;
     padding: 0 2px 0 20px;
     margin: 0;
     background-color: #4d4d4d;
-    height: 35px; 
-    border: none; 
-    border-radius: 5px; 
-    color: white; 
+    border: none;
+    border-radius: 5px;
+    color: white;
     font-size: 14px;
     cursor: pointer;
 }
-.together button:hover{
+
+.together button:hover {
     background-color: #535bf2;
 }
 
 .together img {
-    padding: 0;
-    margin: 0;
     height: 24px;
-    transition: transform 0.2s ease 0.1s; 
-    width: 24px; /* Set proportional width */
-    margin-left: 30px; /* Add spacing between text and icon */
+    width: 24px;
+    margin-left: 30px;
+    transition: transform 0.2s ease 0.1s;
 }
 
-.project-card p{
-    font-size: 13px;
-    font-weight: 400;
-    color: rgb(197, 197, 197);
-    height: 100px;
+/* Responsive Design */
+.projects-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    width: 80vw;
+    margin: 0 auto;
+    box-sizing: border-box;
+    place-items: center;
 }
 
 @media (max-width: 1500px) {
@@ -173,74 +186,56 @@
     .project-card {
         padding: 20px;
     }
-    
 }
-@media (max-width: 1000px){
+
+@media (max-width: 1000px) {
     .projects-list {
-        grid-template-columns: 1fr; 
-        padding: 0;
-        padding-top: 40px;
+        grid-template-columns: 1fr;
+        padding: 40px 0 0;
     }
 }
 
-
-@media (max-width:700px){
+@media (max-width: 700px) {
     .projects-list {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
     }
-    .proj-intro h3, .proj-intro h4{
+
+    .proj-intro h3,
+    .proj-intro h4 {
         width: 100%;
         text-align: left;
     }
-    .proj-intro h4{
+
+    .proj-intro h4 {
         width: 450px;
     }
-    .project-card{
-        width:350px;
+
+    .project-card {
+        width: 350px;
     }
-
-}
-.proj-intro h1{
-    margin-bottom: 0;
-}
-.proj-intro h1, .proj-intro h4, .proj-intro h3, .project-card{
-    text-align: left;
 }
 
-.projects-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
-    width: 80vw;
-    margin: 0 auto;
-    box-sizing: border-box;
-    place-items: center; /* 👈 Center each card in its grid cell */
-  }
-  
-.project-card {
-    background-color: #282525;
-    width: 320px;             /* ✅ LOCK width */
-    padding: 20px;
-    margin: 0;                /* 👈 No margin needed with grid gap */
-    border: 2px solid #ffffff;
-    border-radius: 5px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  }
-
-.proj-intro, .projects-list, .multi-select{
-    margin-left: 48px;
-}
-
-@media (max-width:400px) {
-    .proj-intro{
-        background: #121212;
-        box-shadow: 0;
-        width: 90%;
-    }
-    .proj-intro h1, .proj-intro h4, .proj-intro h3{
+@media (max-width: 400px) {
+    .proj-intro {
         width: 100%;
     }
-    .proj-intro, .projects-list, .multi-select{
+
+    .proj-intro h1,
+    .proj-intro h4,
+    .proj-intro h3 {
+        width: 100%;
+    }
+
+    .proj-intro,
+    .projects-list,
+    .multi-select {
         margin-left: 32px;
     }
+}
+
+/* Margins Adjustments */
+.proj-intro,
+.projects-list,
+.multi-select {
+    margin-left: 48px;
 }

@@ -38,7 +38,7 @@ function Featured() {
         <>
             <div className="featured" ref={ref}>
                 <div className={`leftProj ${inView ? 'fade-in' : ''}`}>
-                    <h1>Project 1</h1>
+                    <h1>Crypto Hustle</h1>
                     <div className="techstack">
                         <div className="badge">ReactJS</div>
                         <div className="badge">Python</div>
@@ -46,8 +46,7 @@ function Featured() {
                         <div className="badge">CSS</div>
                     </div>
                     <h5>
-                        TaskFlow is a smart productivity web app designed for freelancers and creatives
-                        to manage tasks, set deadlines, and visualize their weekly focus. 
+                        Crypto Hustle is a smart crypto currrency web app designed for tracking your favorite coins.
                     </h5>
 
                     <div className="learnBtn" ref={sectionRef}>
