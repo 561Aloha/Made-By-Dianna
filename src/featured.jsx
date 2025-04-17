@@ -39,22 +39,13 @@ function Featured() {
             <div className="featured" ref={ref}>
                 <div className={`leftProj ${inView ? 'fade-in' : ''}`}>
                     <h1>Crypto Hustle</h1>
-                    <div className="techstack">
-                        <div className="badge">ReactJS</div>
-                        <div className="badge">Python</div>
-                        <div className="badge">HTML</div>
-                        <div className="badge">CSS</div>
-                    </div>
+
                     <h5>
                         Crypto Hustle is a smart crypto currrency web app designed for tracking your favorite coins.
                     </h5>
-
-                    <div className="learnBtn" ref={sectionRef}>
-                        <Link to='https://www.github.com/561Aloha'><img src={arrow} alt="Learn More Arrow" /></Link>
-                        <Link to='https://www.github.com/561Aloha'><h4>Learn more</h4></Link>
-                    </div>
-                                        <div className={`button-grp fade-up ${showButtons ? 'show' : ''}`}>
-                        <Link to='https://linkedin.com/in/DiannaD'><button>About Me</button></Link>
+                    <Link to='https://www.github.com/561Aloha'><button > Learn more</button></Link>
+                        <div className={`button-grp fade-up ${showButtons ? 'show' : ''}`}>
+                     
                    </div>
 
                 </div>

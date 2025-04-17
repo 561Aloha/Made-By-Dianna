@@ -213,10 +213,9 @@
   }
 
   .leftProj{
-    height: 300px;
+    height: 250px;
     padding: 0;
   }
-
 
 }
 
@@ -225,15 +224,12 @@
   height: auto;
   width: 80%;
   padding:20px;
+
 }
 
-.proj-section{
-  width: 80%;
-  padding:20px;
-}
+
 
 @media (max-width: 400px) {
-  
   .techstack{
     gap: 5px;
     width: 100%;
@@ -250,8 +246,15 @@
   .rightProj img{
     width: 100%;
   }
-  .rightProj{
-    background-color: aqua;
-  }
 
+}
+
+
+.x{
+  margin:0 auto;
+  width: 80%;
+  padding:20px;
+}
+.box:first-child{
+  margin-left: 0;
 }
