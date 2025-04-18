@@ -45,7 +45,6 @@ function Featured() {
                     </h5>
                     <Link to='https://www.github.com/561Aloha'><button > Learn more</button></Link>
                         <div className={`button-grp fade-up ${showButtons ? 'show' : ''}`}>
-                     
                    </div>
 
                 </div>
@@ -61,21 +60,9 @@ function Featured() {
                 <Link to="/projects"><button>View All</button></Link>
             </div>
             <div className="x">
+
                 <div className="box">
-                    <img src={health} alt="Health Planner" />
-                    <div className="box-text">
-                        <h4>Health Planner Pro</h4>
-                        <p>This is a react application, made for creating and tracking habits</p>
-                    </div>
-                    </div>
-                <div className="box">
-                    <img src={nature} alt="Nature Project" />
-                    <div className="box-text">
-                    <h4>Natures Way Cafe</h4>
-                    <p>This is a UX design project, with high fidelity mockups</p></div>
-                </div>
-                <div className="box">
-                    <img src={nurse} alt="Nurse App" />
+                    <Link to='https://github.com/561Aloha/Nurse-Management'><img src={nurse} alt="Nurse App" /></Link>
                     <div className="box-text">
                     <h4>eNurse</h4>
                     <p>This is a Java based application, where adminstators and nurses manage shifts</p>   </div>
@@ -85,7 +72,20 @@ function Featured() {
                     <div className="box-text">
                     <h4>Spotify Redesign Presentation</h4>
                     <p>This contains a high fidelity mockups of introducing a new feature on spotify</p></div>
+                </div>\                
+                <div className="box">
+                    <Link to ='/naturesway'><img src={nature} alt="Nature Project" /></Link>
+                    <div className="box-text">
+                    <h4>Natures Way Cafe</h4>
+                    <p>This is a UX design project, with high fidelity mockups</p></div>
                 </div>
+                <div className="box">
+                <Link to="https://habittrack.netlify.app/"> <img src={health} alt="Health Planner" /></Link>
+                    <div className="box-text">
+                        <h4>Health Planner Pro</h4>
+                        <p>This is a react application, made for creating and tracking habits</p>
+                    </div>
+                    </div>
             </div>
 
 

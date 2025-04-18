@@ -5,7 +5,7 @@ import './App.css';
 import './navbar.css';
 import Home from './home';
 import Contact from './contact';
-
+import UXDesign from './uxdesign';
 import logo from './assets/logo-d.png';
 import CustomCursor from './customcusor';
 import Projects from './projects';
@@ -54,7 +54,7 @@ function App() {
       { path: "/", element: <Home /> },
       { path: "/projects", element: <Projects /> },
       { path: "/contact", element: <Contact /> },
-
+      { path: "/naturesway", element: <UXDesign /> },
     ]);
   return (
     <>
