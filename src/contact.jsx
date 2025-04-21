@@ -15,12 +15,38 @@ const Contact = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
-    alert('Thanks! Your message has been sent.');
-    setFormData({ name: '', email: '', phone: '', message: '' });
+  
+    try {
+      const response = await fetch('/.netlify/functions/sendEmail', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+  
+      const text = await response.text(); // get raw response
+      let result;
+  
+      try {
+        result = JSON.parse(text); // try to parse it
+      } catch (e) {
+        console.error('Could not parse response:', text); // helpful log
+        throw new Error('Invalid server response');
+      }
+  
+      if (response.ok) {
+        alert('Thanks! Your message has been sent.');
+        setFormData({ name: '', email: '', phone: '', message: '' });
+      } else {
+        throw new Error(result.error || 'Failed to send email');
+      }
+    } catch (err) {
+      alert(`Error: ${err.message}`);
+    }
   };
+  
+  
 
   return (
     <div className='entire'>

@@ -9,6 +9,7 @@ import UXDesign from './uxdesign';
 import logo from './assets/logo-d.png';
 import CustomCursor from './customcusor';
 import Projects from './projects';
+import AboutMe from './about';
 
 
 export function NavBar() {
@@ -55,6 +56,7 @@ function App() {
       { path: "/projects", element: <Projects /> },
       { path: "/contact", element: <Contact /> },
       { path: "/naturesway", element: <UXDesign /> },
+      { path: "/about", element: <AboutMe /> },
     ]);
   return (
     <>

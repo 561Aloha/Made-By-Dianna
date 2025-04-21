@@ -286,7 +286,11 @@
 }
 
 
-
+.me{
+  width:300px;
+  height:auto;
+  border-radius: 14px;
+}
 @media (max-width: 400px){
   .navbar{
    margin-left: 12px;
