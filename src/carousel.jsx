@@ -10,7 +10,7 @@ import frame8 from './nature/frames/frame8.png';
 import frame9 from './nature/frames/frame9.png';
 import frame10 from './nature/frames/frame10.png';
 
-const Carousel = () => {
+const carousel = () => {
 
     const images = [frame1, frame2, frame3, frame5, frame6, frame7, frame8, frame9, frame10];
 
@@ -42,4 +42,4 @@ const Carousel = () => {
     );
 };
 
-export default Carousel;
+export default carousel;
