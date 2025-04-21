@@ -19,7 +19,6 @@ function Projects() {
     const data = [
         { id: 'React.js', title: 'React.js' },
         { id: 'Python', title: 'Python' },
-        { id: 'C++', title: 'C++' },
         { id: 'Javascript', title: 'Javascript' },
         { id: 'Java', title: 'Java' },
         { id: 'Blender', title: 'Blender' },
@@ -52,7 +51,7 @@ function Projects() {
             title: 'Weather Dashboard Application', 
             image: './src/assets/ProjectCover.png', 
             date: 'August 2024- December 2024',   
-            skills: ['Python', 'C++'], 
+            skills: ['Python'], 
             descr: 'This project focuses on building a robust application using object-oriented programming to enhance operational efficiency in healthcare settings.', 
             link: "https://github.com/561Aloha/Weather-Dashboard" 
           },

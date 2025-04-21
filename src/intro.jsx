@@ -84,7 +84,7 @@ function Intro({featuredRef}) {
                     beautiful, user-friendly websites.
                 </p>
                 <div className={`button-grp fade-up ${showButtons ? 'show' : ''}`}>
-                    <Link to='https://linkedin.com/in/DiannaD'><button>About Me</button></Link>
+                    <Link to='/about'><button>About Me</button></Link>
                 </div>
             </div>
             {isMobile && (

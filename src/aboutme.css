@@ -1,0 +1,125 @@
+
+/* Portfolio.css */
+.hero-section {
+    display: flex;
+    margin-top: -100px;
+    height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+    background-color: #000000;
+  }
+  
+  .hero-text {
+    flex: 1;
+    padding: 2rem;
+  }
+  
+  .hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-text h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .social-icons {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .hero-image img {
+    max-width: 300px;
+    border-radius: 1rem;
+  }
+  
+  .portfolio-section {
+    padding: 3rem;
+    background-color: #fdfdf8;
+    text-align: center;
+  }
+  
+  .portfolio-section h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .portfolio-section p {
+    margin-bottom: 2rem;
+    color: #555;
+  }
+  
+  .portfolio-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .card {
+    width: 250px;
+    background-color: #eee;
+    border-radius: 0.75rem;
+    overflow: hidden;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card p {
+    padding: 1rem;
+    font-weight: 500;
+  }
+  
+  .client-feature {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 3rem;
+    background-color: #fff;
+    gap: 2rem;
+  }
+  
+  .client-image img {
+    width: 250px;
+    border-radius: 1rem;
+  }
+  
+  .client-bio {
+    flex: 1;
+  }
+  
+  .client-bio h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .client-bio p {
+    margin: 0.25rem 0;
+    line-height: 1.6;
+  }
+  
+  .client-bio button {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #222;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .client-bio button:hover {
+    background-color: #444;
+  }
+  
