@@ -7,14 +7,13 @@ import starbooksImage from './nature/starbucks.jpg';
 import lightening from './nature/lightning.svg';
 import star from './nature/star.svg';
 import smile from './nature/smile.svg';
-import Carousel from './Carousel.jsx';
+import Carousel from './carousel.jsx';
 import slide1 from './nature/feature1.png';
 import slide2 from './nature/feature2.png';
 import slide3 from './nature/beforeafter.jpg';
 import slide4 from './nature/beforeafter1.jpg';
 import slide5 from './nature/beforeafter2.png';
 import { NavBar } from './App.jsx';
-
 
   
 const Persona = ({ image, callout, personsname, shortbio, listItems = [] }) => {
