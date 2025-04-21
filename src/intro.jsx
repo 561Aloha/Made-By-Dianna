@@ -11,7 +11,7 @@ function Intro({featuredRef}) {
     const [showWelcome, setShowWelcome] = useState(false);
     const [showMadeBy, setShowMadeBy] = useState(false);
 
-    // Detect mobile
+
     useEffect(() => {
         const checkMobile = () => setIsMobile(window.innerWidth <= 768);
         checkMobile();
@@ -19,7 +19,6 @@ function Intro({featuredRef}) {
         return () => window.removeEventListener('resize', checkMobile);
     }, []);
 
-    // Animate in text/buttons
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
