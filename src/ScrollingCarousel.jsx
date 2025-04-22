@@ -1,24 +1,35 @@
 // ScrollingCarousel.jsx
 import React from 'react';
 import './ScrollingCarousel.css'; // Add styles here or inline
+import premier from '/src/techstack/premierepro-original.svg';
+import java from '/src/techstack/java-original-wordmark.svg';
+import reactjs from '/src/techstack/react-original-wordmark.svg' ;
+import python from '/src/techstack/python-original-wordmark.svg';
+import jira from '/src/techstack/jira-original-wordmark.svg';
+import mySQL from '/src/techstack/mysql-original-wordmark.svg';
+import mongodb from '/src/techstack/mongodb-plain-wordmark.svg';
+// import html from 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6935wo8bLZh5FeafJEffqWKDOpNpx6UE5bg&s'
+import javascript from '/src/techstack/javascript-original.svg';
+import visualstudio from '/src/techstack/vscode-original.svg';
+import blender from '/src/techstack/blender-original.svg';
+
 
 const logos = [
   { name: 'Photoshop', src: 'https://framerusercontent.com/images/3SIrHskhdN3KIZ9yST4cHFoDFoE.png' },
   { name: 'Illustrator', src: 'https://framerusercontent.com/images/Sjz2Y8xaD3oOnEnL8N14lc76MUw.png' },
   { name: 'After Effects', src: 'https://framerusercontent.com/images/W8s44eFSuDPV2bf1pIBLHJ4R8.png' },
   { name: 'Figma', src: 'https://framerusercontent.com/images/FH1BjO4xxiAytzz8NNz4BCd4Xw.png' },
-  { name: 'Premier Pro', src: './src/techstack/premierepro-original.svg' },
-  { name: 'Java', src: '/src/techstack/java-original-wordmark.svg' },
-  { name: 'ReactJS', src: '/src/techstack/react-original-wordmark.svg' },
-  { name: 'Python', src: '/src/techstack/python-original-wordmark.svg' },
-  // { name: 'Microsoft Azure', src: 'https://framerusercontent.com/images/3SIrHskhdN3KIZ9yST4cHFoDFoE.png' },
-  { name: 'Jira', src: '/src/techstack/jira-original-wordmark.svg' },
-  { name: 'MySQL', src: '/src/techstack/mysql-original-wordmark.svg' },
-  { name: 'MongoDB', src: '/src/techstack/mongodb-plain-wordmark.svg' },
+  { name: 'Premier Pro', src: {premier}},
+  { name: 'Java', src:{java} },
+  { name: 'ReactJS', src: {reactjs}},
+  { name: 'Python', src: {python} },
+  { name: 'Jira', src:{jira} },
+  { name: 'MySQL', src: {mySQL} },
+  { name: 'MongoDB', src: {mongodb} },
   { name: 'HTML/CSS', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6935wo8bLZh5FeafJEffqWKDOpNpx6UE5bg&s' },
-  { name: 'Javascript', src: '/src/techstack/javascript-original.svg' },
-  { name: 'Visual Studio Code', src: '/src/techstack/vscode-original.svg'},
-  { name: 'Blender', src: '/src/techstack/blender-original.svg'},
+  { name: 'Javascript', src: {javascript}},
+  { name: 'Visual Studio Code', src: {visualstudio}},
+  { name: 'Blender', src: {blender}},
 ];
 
 const ScrollingCarousel = () => {
