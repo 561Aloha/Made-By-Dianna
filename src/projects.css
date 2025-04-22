@@ -210,6 +210,18 @@
     margin-left: 48px;
 }
 
+.projects-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    margin-left: 48px;
+    place-items: center;
+  }
+  
+
 @media (max-width:600px) {
     .proj-intro{
         box-shadow: 0;
@@ -221,18 +233,6 @@
     .proj-intro h4{
         width: 90%;
     }
-}
 
-.projects-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: #11bdf2;
-    box-sizing: border-box;
-    margin-left: 48px;
-    place-items: center;
-  }
-  
+}
 

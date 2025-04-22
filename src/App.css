@@ -219,23 +219,23 @@
       justify-content:end;
       justify-content: flex-end;
     }
-    .hello{
+  .hello{
       display: none;
     }
-    .column-b{
+  .column-b{
       width: 100%;
     }
-    .column-b h4{
+  .column-b h4{
       padding: 0;
       margin:10;
-    }
-    .column-b h4:last-child{
+  }
+  .column-b h4:last-child{
       margin-top:10px;
     }
-    .column-b{
-      margin-bottom: 0;
-      padding-bottom: 0;
-    }
+  .column-b{
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
 
 }
 
@@ -292,18 +292,24 @@
   height:auto;
   border-radius: 14px;
 }
-@media (max-width: 400px){
+
+
+@media (max-width: 500px){
   .navbar{
    margin-left: 12px;
   }
   .main-head{
     margin-left: 0;
-    width: 80%;
+    width: 100%;
+    background-color: #218ef3;
   }
   .intro{
     margin-left: 0px;
-
   }
+  .main-head p{
+    width: 325px;
+  }
+  
   .tech-grid{
     width: 80%;
   }
@@ -315,7 +321,6 @@
   }
  }  
 
- 
  /* For mobile intro layout */
 .mobile-intro {
   height: 90vh;
@@ -335,8 +340,6 @@
 
 .scroll-hint {
   position: absolute;
-
-/* previously 16 */
   bottom: 24px; 
   width: 100%;
   text-align: center;
@@ -371,3 +374,6 @@
 .database {
   background-color: #ddee49; 
 }
+
+
+
