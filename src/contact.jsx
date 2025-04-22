@@ -66,7 +66,7 @@ const Contact = () => {
       <input type="hidden" name="form-name" value="contact" />
       <input type="hidden" name="bot-field" />
 
-      <label htmlFor="name">WHAT’S YOUR NAME?</label>
+      <label htmlFor="name"><h3>WHAT’S YOUR NAME?</h3></label>
       <input
         type="text"
         id="name"
@@ -76,7 +76,7 @@ const Contact = () => {
         required
       />
 
-      <label htmlFor="email">WHAT’S YOUR EMAIL?</label>
+      <label htmlFor="email"><h3>WHAT’S YOUR EMAIL?</h3></label>
       <input
         type="email"
         id="email"
@@ -86,7 +86,7 @@ const Contact = () => {
         required
       />
 
-      <label htmlFor="phone">PHONE NUMBER</label>
+      <label htmlFor="phone"><h3>PHONE NUMBER</h3></label>
       <input
         type="text"
         id="phone"
@@ -95,7 +95,7 @@ const Contact = () => {
         onChange={handleChange}
       />
 
-      <label htmlFor="message">YOUR MESSAGE</label>
+      <label htmlFor="message"><h3>Write me a message </h3></label>
       <textarea
         id="message"
         name="message"
