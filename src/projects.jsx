@@ -52,7 +52,7 @@ function Projects() {
             image: './src/assets/ProjectCover.png', 
             date: 'August 2024- December 2024',   
             skills: ['Python'], 
-            descr: 'This project focuses on building a robust application using object-oriented programming to enhance operational efficiency in healthcare settings.', 
+            descr: 'Track the weather using reading and creating APIs', 
             link: "https://github.com/561Aloha/Weather-Dashboard" 
           },
           { 
@@ -61,7 +61,7 @@ function Projects() {
             image: './src/assets/ProjectCover.png', 
             date: 'May 2022- December 2022',   
             skills: ['Python', 'React.js'], 
-            descr: 'This project explores UX/UI design principles to create an intuitive and responsive dashboard for weather monitoring.', 
+            descr: 'This project focuses on building a robust application using object-oriented programming to enhance operational efficiency in healthcare settings.', 
             link: "https://github.com/561Aloha/Nurse-Management"
           },
           { 
@@ -80,9 +80,9 @@ function Projects() {
         : projects;
 
         return (
-            <div className="entire-page">
+            <div >
                 <NavBar />
-                
+                <div className="entire-page">
                 <div className="proj-intro">
                     <h1>Projects</h1>
                    <h4>Open-source projects I've made over the years, including this website, an emulator, and various games, apps, frameworks, and boilerplates.</h4>
@@ -129,7 +129,7 @@ function Projects() {
                     </div>
                     )}
                 </div>
-
+                </div>
                 </div>
         );
     }

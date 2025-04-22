@@ -72,7 +72,7 @@ function Featured() {
                     <div className="box-text">
                     <h4>Spotify Redesign Presentation</h4>
                     <p>This contains a high fidelity mockups of introducing a new feature on spotify</p></div>
-                </div>\                
+                </div>             
                 <div className="box">
                     <Link to ='/naturesway'><img src={nature} alt="Nature Project" /></Link>
                     <div className="box-text">

@@ -197,4 +197,12 @@
   .button-grp button {
       margin-top: 0;
   }
+  .main-head{
+    width: 60%;
+  }
+
+  .main-head p{
+    width: 100%;
+    padding:0;
+  }
 }
