@@ -1,6 +1,6 @@
 .carousel-container {
     overflow: hidden;
-    width: 100%;
+    width: 80%;
     mask-image: linear-gradient(to right, rgba(0,0,0,0), black 15%, black 85%, rgba(0,0,0,0));
   }
   
