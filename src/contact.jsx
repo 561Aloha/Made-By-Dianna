@@ -75,14 +75,6 @@ const Contact = () => {
         onChange={handleChange}
       />
 
-      <label htmlFor="phone" className="optional">WHAT’S YOUR PHONE NUMBER?</label>
-      <input
-        type="tel"
-        id="phone"
-        name="phone"
-        value={formData.phone}
-        onChange={handleChange}
-      />
 
       <h2>If your project could talk, what would it say?</h2>
 
