@@ -217,6 +217,9 @@ display: none; /* Chrome, Safari, Opera */
 }
 
 @media (max-width: 400px) {
+.featured, .proj-section{
+  width: 90%;
+}
 .techstack{
   gap: 5px;
   width: 100%;
@@ -230,5 +233,11 @@ display: none; /* Chrome, Safari, Opera */
 .learnBtn 
 .proj-section h4{
   font-size: 24px;
+}
+.rightProj img{
+  width: 100%;
+}
+.proj-section h3{
+  font-size: 30px;
 }
 }

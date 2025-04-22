@@ -191,7 +191,7 @@
 @media (max-width: 1000px) {
     .projects-list {
         grid-template-columns: 1fr;
-        padding: 40px 0 0;
+ 
     }
 }
 
@@ -214,13 +214,19 @@
         width: 350px;
     }
 }
+/* Margins Adjustments */
+.proj-intro,
+.projects-list,
+.multi-select {
+    margin-left: 48px;
+}
+
+
 
 @media (max-width: 400px) {
-
     .proj-intro {
         width: 100%;
     }
-
     .proj-intro h1,
     .proj-intro h4,
     .proj-intro h3 {
@@ -238,13 +244,10 @@
     .project-card{
         width: 320px;
     }
-}
-
-/* Margins Adjustments */
-.proj-intro,
-.projects-list,
-.multi-select {
-    margin-left: 48px;
+    
+    .projects-list{
+        padding: 10px;
+    }
 }
 
 
