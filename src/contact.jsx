@@ -56,57 +56,57 @@ const Contact = () => {
   return (
     <div className='entire'>
       <NavBar />
-      <form className="styled-contact-form" onSubmit={handleSubmit}>
-        <h1>Hello, nice to meet you!</h1>
+      <form
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        className="styled-contact-form"
+      >
+      <input type="hidden" name="form-name" value="contact" />
+      <input type="hidden" name="bot-field" />
 
-        <label htmlFor="name">WHAT’S YOUR NAME?</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-        />
+      <label htmlFor="name">WHAT’S YOUR NAME?</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        value={formData.name}
+        onChange={handleChange}
+        required
+      />
 
-        <label htmlFor="email">
-          WHAT’S YOUR EMAIL? <span className="required">*</span>
-        </label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          required
-          value={formData.email}
-          onChange={handleChange}
-        />
+      <label htmlFor="email">WHAT’S YOUR EMAIL?</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        value={formData.email}
+        onChange={handleChange}
+        required
+      />
 
-        <label htmlFor="phone">PHONE NUMBER (optional)</label>
-        <input
-          type="text"
-          id="phone"
-          name="phone"
-          value={formData.phone}
-          onChange={handleChange}
-        />
+      <label htmlFor="phone">PHONE NUMBER</label>
+      <input
+        type="text"
+        id="phone"
+        name="phone"
+        value={formData.phone}
+        onChange={handleChange}
+      />
 
-        <h2>If your project could talk, what would it say?</h2>
+      <label htmlFor="message">YOUR MESSAGE</label>
+      <textarea
+        id="message"
+        name="message"
+        value={formData.message}
+        onChange={handleChange}
+        required
+      />
 
-        <label htmlFor="message">
-          YOUR MESSAGE <span className="required">*</span>
-        </label>
-        <textarea
-          id="message"
-          name="message"
-          required
-          value={formData.message}
-          onChange={handleChange}
-        />
+      <button type="submit">Send</button>
+    </form>
 
-        <button type="submit" disabled={loading}>
-          {loading ? 'Sending...' : 'Send'}
-        </button>
-      </form>
     </div>
   );
 };
