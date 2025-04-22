@@ -11,7 +11,7 @@ const logos = [
   { name: 'Java', src: '/src/techstack/java-original-wordmark.svg' },
   { name: 'ReactJS', src: '/src/techstack/react-original-wordmark.svg' },
   { name: 'Python', src: '/src/techstack/python-original-wordmark.svg' },
-  { name: 'Microsoft Azure', src: 'https://framerusercontent.com/images/3SIrHskhdN3KIZ9yST4cHFoDFoE.png' },
+  // { name: 'Microsoft Azure', src: 'https://framerusercontent.com/images/3SIrHskhdN3KIZ9yST4cHFoDFoE.png' },
   { name: 'Jira', src: '/src/techstack/jira-original-wordmark.svg' },
   { name: 'MySQL', src: '/src/techstack/mysql-original-wordmark.svg' },
   { name: 'MongoDB', src: '/src/techstack/mongodb-plain-wordmark.svg' },

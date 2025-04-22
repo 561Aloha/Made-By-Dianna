@@ -178,7 +178,14 @@
   pointer-events: auto;
 }
 
-
+.x{
+  margin:0 auto;
+  width: 80%;
+  padding:20px;
+}
+.box:first-child{
+  margin-left: 0;
+}
 
 @media (max-width:900px) {
 
@@ -238,7 +245,7 @@
     font-size: 32px;
   }
   .proj-section h3{
-    font-size: 32px;
+    font-size: 30px;
   }
   .proj-section h4{
     font-size: 24px;
@@ -250,11 +257,3 @@
 }
 
 
-.x{
-  margin:0 auto;
-  width: 80%;
-  padding:20px;
-}
-.box:first-child{
-  margin-left: 0;
-}
