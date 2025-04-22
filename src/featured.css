@@ -1,7 +1,7 @@
 .featured{
     display: flex;
     margin: 0 auto;
-    width: 90%;
+    width: 80%;
     margin-top: 24px;
     padding:18px;
     text-align: left;
@@ -237,6 +237,9 @@
 
 
 @media (max-width: 400px) {
+  button{
+    color: white;
+  }
   .techstack{
     gap: 5px;
     width: 100%;
@@ -244,14 +247,24 @@
   .leftProj h1{
     font-size: 32px;
   }
+  .proj-section{
+    width: 80%;
+    padding: 12px;
+  }
   .proj-section h3{
     font-size: 30px;
+    margin:0;
+    padding:0;
+    width: 60%;
   }
   .proj-section h4{
     font-size: 24px;
   }
   .rightProj img{
     width: 100%;
+  }
+  .box img{
+    width: 250px;
   }
 
 }

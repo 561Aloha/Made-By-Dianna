@@ -216,20 +216,27 @@
 }
 
 @media (max-width: 400px) {
+
     .proj-intro {
-        width: 80%;
+        width: 100%;
     }
 
     .proj-intro h1,
     .proj-intro h4,
     .proj-intro h3 {
-        width: 100%;
+        width: 60%;
     }
 
     .proj-intro,
     .projects-list,
     .multi-select {
-        margin-left: 32px;
+        margin-left: 30px;
+    }
+    .project-card img{
+        width: 200px;
+    }
+    .project-card{
+        width: 320px;
     }
 }
 
@@ -239,3 +246,5 @@
 .multi-select {
     margin-left: 48px;
 }
+
+
