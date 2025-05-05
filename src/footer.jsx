@@ -25,9 +25,9 @@ function Footer() {
             <Link to="/uxdesign">UX Projects</Link>
             <Link to="/contact">Contact</Link> */}
             <div className="social">
-                <img src={instagram}></img>
-                <img src={linkedin}></img>
-                <img src={github}></img>
+                <Link to='https://www.instagram.com/madebydianna'><img src={instagram}></img></Link>
+                <Link to='https://www.linkedin.com/diannad'><img src={linkedin}></img></Link>
+                <Link to='https://www.github.com/561Aloha'>  <img src={github}></img></Link>
             </div>
         </div>
         </div>

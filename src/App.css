@@ -323,7 +323,7 @@
 
  /* For mobile intro layout */
 .mobile-intro {
-  height: 90vh;
+  height: 85vh;
   position: relative;
   overflow: hidden;
 }
