@@ -1,9 +1,8 @@
 import React from 'react';
-import ExperienceItem from './experienceitem.jsx';
 import './experience.css';
 
 const experienceData = [
-    {
+  {
     title: 'Business Development Representative',
     company: 'Nominal AI',
     date: 'May 2025 - September 2025',
@@ -13,7 +12,7 @@ const experienceData = [
       'Communicated with cross-functional teams including sales engineers and marketing to incorporate new outreach initiatives.',
       'Performed outreach and inbound activities to create bookings to see the platform in action.',
       'Made 200+ daily cold calls and engaged with 100+ LinkedIn finance leaders.',
-      ],
+    ],
     badges: ['Sales', 'Lead Generation', 'Cold Calling', 'LinkedIn', 'Demo Creation'],
   },
   {
@@ -60,9 +59,29 @@ const experienceData = [
   },
 ];
 
+// ✅ ExperienceItem defined inline here
+function ExperienceItem({ job }) {
+  return (
+    <div className="experience-item">
+      <h3>{job.title}</h3>
+      <h4>{job.company}</h4>
+      <p className="experience-date">{job.date}</p>
+      <p className="experience-short">{job.shortDescription}</p>
+      <ul>
+        {job.description.map((point, i) => (
+          <li key={i}>{point}</li>
+        ))}
+      </ul>
+      <div className="experience-badges">
+        {job.badges.map((badge, i) => (
+          <span key={i} className="badge">{badge}</span>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 function Experience() {
-
   return (
     <section id="experience">
       <h2 className="experience-title">Experience</h2>
