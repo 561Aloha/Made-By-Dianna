@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import './App.css';
+import './intro.css';
 import { Link } from "react-router-dom";
 import { NavBar } from './App.jsx'; 
 
@@ -10,14 +11,35 @@ function Intro({featuredRef}) {
     const [showButtons, setShowButtons] = useState(false);
     const [showWelcome, setShowWelcome] = useState(false);
     const [showMadeBy, setShowMadeBy] = useState(false);
-
+    const [shouldShowMobileIntro, setShouldShowMobileIntro] = useState(false);
 
     useEffect(() => {
-        const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+        const checkMobile = () => {
+            const wasMobile = isMobile;
+            const nowMobile = window.innerWidth <= 768;
+            setIsMobile(nowMobile);
+            
+            if (nowMobile) {
+                // Check if we're in the intro section
+                const introSection = document.getElementById('intro');
+                const introHeight = introSection?.offsetHeight || window.innerHeight;
+                const currentScroll = window.scrollY;
+                
+                // Only show mobile intro if we're in the top section
+                if (currentScroll < introHeight * 0.8) {
+                    setShouldShowMobileIntro(true);
+                } else {
+                    setShouldShowMobileIntro(false);
+                }
+            } else {
+                setShouldShowMobileIntro(false);
+            }
+        };
+        
         checkMobile();
         window.addEventListener('resize', checkMobile);
         return () => window.removeEventListener('resize', checkMobile);
-    }, []);
+    }, [isMobile]);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -35,10 +57,8 @@ function Intro({featuredRef}) {
         if (sectionRef.current) observer.observe(sectionRef.current);
         return () => observer.disconnect();
     }, []);
-
-    // Scroll to featured if mobile and user scrolls near bottom
     useEffect(() => {
-        if (!isMobile) return;
+        if (!shouldShowMobileIntro) return;
 
         const handleScroll = () => {
             const scrollY = containerRef.current.scrollTop;
@@ -58,22 +78,23 @@ function Intro({featuredRef}) {
         return () => {
             if (currentRef) currentRef.removeEventListener('scroll', handleScroll);
         };
-    }, [isMobile]);
+    }, [shouldShowMobileIntro]);
 
+    // Only lock body scroll if we should show mobile intro
     useEffect(() => {
-        if (isMobile) {
-          document.body.style.overflow = 'hidden';
+        if (shouldShowMobileIntro) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
         }
       
         return () => {
-          document.body.style.overflow = 'auto'; // restore when unmounted
+            document.body.style.overflow = 'auto'; // restore when unmounted
         };
-      }, [isMobile]);
-      
-
+    }, [shouldShowMobileIntro]);
 
     return (
-        <div id="intro" ref={containerRef} className={`intro ${isMobile ? 'mobile-intro' : ''}`}>
+        <div id="intro" ref={containerRef} className={`intro ${shouldShowMobileIntro ? 'mobile-intro' : ''}`}>
             <NavBar />
             <div className="main-head" ref={sectionRef}>
                 <h4 className={`fade-up ${showWelcome ? 'show' : ''}`}>Welcome to</h4>
@@ -86,35 +107,36 @@ function Intro({featuredRef}) {
                     <Link to='/about'><button>About Me</button></Link>
                 </div>
             </div>
-            {isMobile && (
-                < div className="swipe">
+            
+            {shouldShowMobileIntro && (
+                <div className="swipe">
                     <div
-                    className="swipe-zone"
-                    onTouchStart={(e) => (window._touchStartY = e.touches[0].clientY)}
-                    onTouchEnd={(e) => {
-                    const endY = e.changedTouches[0].clientY;
-                    const diffY = window._touchStartY - endY;
-                    if (diffY > 50 && featuredRef?.current) {
-                        featuredRef.current.scrollIntoView({ behavior: 'smooth' });
-                        document.body.style.overflow = 'auto'; // ✅ unlock scroll
-                    }
-                    }}
-
+                        className="swipe-zone"
+                        onTouchStart={(e) => (window._touchStartY = e.touches[0].clientY)}
+                        onTouchEnd={(e) => {
+                            const endY = e.changedTouches[0].clientY;
+                            const diffY = window._touchStartY - endY;
+                            if (diffY > 50 && featuredRef?.current) {
+                                featuredRef.current.scrollIntoView({ behavior: 'smooth' });
+                                document.body.style.overflow = 'auto';
+                                setShouldShowMobileIntro(false); // Disable mobile intro after swipe
+                            }
+                        }}
                     />
                     <div
-                    className="scroll-hint"
-                    onClick={() => {
-                        if (featuredRef?.current) {
-                        featuredRef.current.scrollIntoView({ behavior: 'smooth' });
-                            document.body.style.overflow = 'auto';
-                        }
-                    }}
+                        className="scroll-hint"
+                        onClick={() => {
+                            if (featuredRef?.current) {
+                                featuredRef.current.scrollIntoView({ behavior: 'smooth' });
+                                document.body.style.overflow = 'auto';
+                                setShouldShowMobileIntro(false); 
+                            }
+                        }}
                     >
-                    press me ↓
+                        press me ↓
                     </div>
                 </div>
-                )}
-
+            )}
         </div>
     );
 }

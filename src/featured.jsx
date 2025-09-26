@@ -1,96 +1,133 @@
-import React, { useEffect, useRef, useState } from "react";
-import './featured.css';
+import React, { useEffect, useState, useRef } from "react";
+import "./featured.css";
 import { Link } from "react-router-dom";
-import projImg from './assets/projImg.png';
-import nurse from './assets/eNurse.png';
-import nature from './assets/nature.png';
-import portfolio from './assets/portfolio.png';
-import health from './assets/health.png';
-import spotify from './assets/spotify.png';
-import arrow from './assets/arrow-right.png';
-import { useInView } from 'react-intersection-observer';
-
+import { useInView } from "react-intersection-observer";
+import projVideo from "./assets/expand.mp4";
+import cryptoVid from "./assets/crypto.mp4";
 
 function Featured() {
-    const { ref, inView } = useInView({
-        threshold: 0.2,
-        triggerOnce: true,
-      });
-    const sectionRef = useRef(null);
-    const [showButtons, setShowButtons] = useState(false);
-      useEffect(() => {
-          const observer = new IntersectionObserver(
-              ([entry]) => {
-                  if (entry.isIntersecting) {
-                      setShowWelcome(true);
-                      setTimeout(() => setShowButtons(true), 600);
-                      observer.unobserve(entry.target);
-                  }
-              },
-              { threshold: 0.1 }
-          );
-  
-          if (sectionRef.current) observer.observe(sectionRef.current);
-          return () => observer.disconnect();
-      }, []);
+  const { ref: rowRef, inView: rowInView } = useInView({
+    threshold: 0.2,
+    triggerOnce: true,
+  });
 
-    return (
-        <>
-            <div className="featured" ref={ref}>
-                <div className={`leftProj ${inView ? 'fade-in' : ''}`}>
-                    <h1>Crypto Hustle</h1>
+  // individual refs + inView hooks for each video
+  const video1Ref = useRef(null);
+  const video2Ref = useRef(null);
 
-                    <h5>
-                        Crypto Hustle is a smart crypto currrency web app designed for tracking your favorite coins.
-                    </h5>
-                    <Link to='https://www.github.com/561Aloha'><button > Learn more</button></Link>
-                        <div className={`button-grp fade-up ${showButtons ? 'show' : ''}`}>
-                   </div>
+  const { ref: video1InViewRef, inView: video1InView } = useInView({
+    threshold: 0.5,
+    triggerOnce: false,
+  });
 
-                </div>
+  const { ref: video2InViewRef, inView: video2InView } = useInView({
+    threshold: 0.5,
+    triggerOnce: false,
+  });
 
-                <div className={`rightProj ${inView ? 'fade-in' : ''}`}>
-                    <img src={projImg} alt="Project Preview" />
-                </div>
-            </div>
+  const [showButtons, setShowButtons] = useState(false);
 
-            {/* Other Projects */}
-            <div className="proj-section">
-                <h3>Other Projects</h3>
-                <Link to="/projects"><button>View All</button></Link>
-            </div>
-            <div className="x">
+  useEffect(() => {
+    if (rowInView) {
+      setTimeout(() => setShowButtons(true), 300);
+    }
+  }, [rowInView]);
 
-                <div className="box">
-                    <Link to='https://github.com/561Aloha/Nurse-Management'><img src={nurse} alt="Nurse App" /></Link>
-                    <div className="box-text">
-                    <h4>eNurse</h4>
-                    <p>This is a Java based application, where adminstators and nurses manage shifts</p>   </div>
-                </div>
-                <div className="box">
-                    <Link to='https://www.figma.com/slides/Bzbavt4OouWH6zYyLjbPau/Spotify?t=yIxfio1MyWTyZpgc-0'><img src={spotify} alt="Spotify Clone" /></Link>
-                    <div className="box-text">
-                    <h4>Spotify Redesign Presentation</h4>
-                    <p>This contains a high fidelity mockups of introducing a new feature on spotify</p></div>
-                </div>             
-                <div className="box">
-                    <Link to ='/naturesway'><img src={nature} alt="Nature Project" /></Link>
-                    <div className="box-text">
-                    <h4>Natures Way Cafe</h4>
-                    <p>This is a UX design project, with high fidelity mockups</p></div>
-                </div>
-                <div className="box">
-                <Link to="https://habittrack.netlify.app/"> <img src={health} alt="Health Planner" /></Link>
-                    <div className="box-text">
-                        <h4>Health Planner Pro</h4>
-                        <p>This is a react application, made for creating and tracking habits</p>
-                    </div>
-                    </div>
-            </div>
+  // Autoplay / pause when videos come in/out of view
+  useEffect(() => {
+    if (video1Ref.current) {
+      if (video1InView) {
+        video1Ref.current.play().catch(err => console.log("Video 1 play error:", err));
+      } else {
+        video1Ref.current.pause();
+      }
+    }
+  }, [video1InView]);
 
+  useEffect(() => {
+    if (video2Ref.current) {
+      if (video2InView) {
+        video2Ref.current.play().catch(err => console.log("Video 2 play error:", err));
+      } else {
+        video2Ref.current.pause();
+      }
+    }
+  }, [video2InView]);
 
-        </>
-    );
+  return (
+    <>
+      <div className="proj-section">
+        <div>
+          <h3>Featured Projects</h3>
+          <p>These are some of the projects I've worked on.</p>
+        </div>
+        <Link to="/projects">
+          <button>View All</button>
+        </Link>
+      </div>
+
+      <div className="row" ref={rowRef}>
+        {/* First Project */}
+        <div className="featured">
+          <div className="img-proj" ref={video1InViewRef}>
+            <video
+              ref={video1Ref}
+              src={projVideo}
+              preload="auto"
+              loop
+              muted
+              playsInline
+              controls={false}
+              style={{ width: "100%", display: "block", borderRadius: "12px" }}
+            />
+          </div>
+          <div className={`leftProj ${rowInView ? "fade-in" : ""}`}>
+            <h4>Expand Project</h4>
+            <h5>
+              Expand is a project that demonstrates autoplay videos triggered
+              when scrolled into view.
+            </h5>
+            <a href="https://habittrack.netlify.app" target="_blank" rel="noopener noreferrer">
+              <button>Visit Project</button>
+            </a>
+            <a href="https://github.com/561Aloha/Habit-Tracker/" target="_blank" rel="noopener noreferrer">
+              <button>Visit Github</button>
+            </a>
+          </div>
+        </div>
+
+        {/* Second Project */}
+        <div className="featured">
+          <div className="img-proj" ref={video2InViewRef}>
+            <video
+              ref={video2Ref}
+              src={cryptoVid}
+              preload="auto"
+              loop
+              muted
+              playsInline
+              controls={false}
+              style={{ width: "100%", display: "block", borderRadius: "12px" }}
+            />
+          </div>
+          <div className={`leftProj ${rowInView ? "fade-in" : ""}`}>
+            <h4>Crypto Hustle</h4>
+            <h5>
+              Crypto Hustle is a smart cryptocurrency web app designed for
+              tracking your favorite coins and managing your portfolio with
+              real-time updates.
+            </h5>
+            <a href="https://crypto-valley.netlify.app" target="_blank" rel="noopener noreferrer">
+              <button>View Project</button>
+            </a>
+            <a href="https://github.com/561Aloha/CryptoHustle" target="_blank" rel="noopener noreferrer">
+              <button>View Github</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }
 
 export default Featured;

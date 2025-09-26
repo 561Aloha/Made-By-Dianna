@@ -1,125 +1,239 @@
-
-/* Portfolio.css */
+/* AboutMe.css */
 .hero-section {
-    display: flex;
-    margin-top: -100px;
-    height: 100vh;
-    justify-content: space-between;
-    align-items: center;
-    padding: 3rem;
-    background-color: #000000;
-  }
-  
-  .hero-text {
-    flex: 1;
-    padding: 2rem;
-  }
-  
-  .hero-text h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  
+  display: flex;
+  margin: 0 auto;
+  margin-top: -102px;
+  align-items: center;
+  width: 90%;
+  padding: 3rem;
+  max-width: 1200px; /* Add max-width instead of min-width */
+}
+
+.hero-text {
+  flex: 1;
+  text-align: left;
+  max-width:500px;
+}
+
+.hero-text h1 {
+  margin-bottom: 1rem;
+}
+
+.hero-text h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.social-icons {
+  font-size: 1rem;
+  display: flex;
+  gap: 1rem;
+  height: 32px;
+  filter: invert(1);
+  margin-top: 2rem;
+}
+
+.social-icons img {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.social-icons img:hover {
+  opacity: 0.7;
+}
+
+.hero-image {
+  flex: 1;
+}
+
+.hero-image img {
+  margin-left: 48px;
+  max-width: 600px;
+  border-radius: 1rem;
+  object-fit: cover;
+  max-height: 700px;
+}
+
+.portfolio-section {
+  padding: 3rem;
+  background-color: #fdfdf8;
+  text-align: center;
+}
+
+.portfolio-section h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-section p {
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.portfolio-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card {
+  width: 250px;
+  background-color: #eee;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card p {
+  padding: 1rem;
+  font-weight: 500;
+}
+
+.client-feature {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 3rem;
+  background-color: #fff;
+  gap: 2rem;
+}
+
+.client-image img {
+  width: 250px;
+  border-radius: 1rem;
+}
+
+.client-bio {
+  flex: 1;
+}
+
+.client-bio h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.client-bio p {
+  margin: 0.25rem 0;
+  line-height: 1.6;
+}
+
+.client-bio button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #222;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.client-bio button:hover {
+  background-color: #444;
+}
+
+/* Mobile Styles */
+@media (max-width: 900px) {
   .hero-text h2 {
-    font-size: 1.75rem;
+    font-size: 24px;
     margin-bottom: 1rem;
   }
-  
-  .hero-text p {
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-  
-  .social-icons {
-    margin-top: 1rem;
-    font-size: 1.5rem;
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .hero-image img {
-    max-width: 300px;
-    border-radius: 1rem;
-  }
-  
-  .portfolio-section {
-    padding: 3rem;
-    background-color: #fdfdf8;
+  .hero-section {
+    flex-direction: column;
     text-align: center;
+    margin: 0 auto;
+    padding: 1rem;
+    width: 80%;
   }
-  
-  .portfolio-section h2 {
-    font-size: 2rem;
+
+  .hero-text {
+    padding: 1rem 0;
+    width: 100%;
+    max-width: none;
+    flex: none;
+    margin: 0;
+  }
+
+  .hero-text h1 {
+    font-size: 32px;
     margin-bottom: 0.5rem;
   }
-  
-  .portfolio-section p {
-    margin-bottom: 2rem;
-    color: #555;
+
+  .hero-text p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
   }
-  
-  .portfolio-cards {
+
+  .social-icons {
+    margin-top: 1.5rem;
+  }
+
+  .hero-image {
+    flex: none;
+    width: 100%;
     display: flex;
     justify-content: center;
-    gap: 2rem;
   }
-  
-  .card {
-    width: 250px;
-    background-color: #eee;
-    border-radius: 0.75rem;
-    overflow: hidden;
-  }
-  
-  .card img {
+
+  .hero-image img {
+    margin: 1rem 0 0 0;
+    max-width: 480px;
     width: 100%;
-    height: auto;
+    max-height: 350px;
   }
-  
-  .card p {
-    padding: 1rem;
-    font-weight: 500;
+
+  .portfolio-section {
+    padding: 2rem 1rem;
   }
-  
-  .client-feature {
-    display: flex;
-    flex-direction: row;
+
+  .portfolio-cards {
+    flex-direction: column;
     align-items: center;
-    padding: 3rem;
-    background-color: #fff;
-    gap: 2rem;
+    gap: 1.5rem;
   }
-  
+
+  .client-feature {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
   .client-image img {
-    width: 250px;
-    border-radius: 1rem;
+    width: 200px;
   }
-  
-  .client-bio {
-    flex: 1;
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 0.5rem;
+    width: 98%;
   }
-  
-  .client-bio h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+
+  .hero-text {
+    padding: 0.5rem;
   }
-  
-  .client-bio p {
-    margin: 0.25rem 0;
-    line-height: 1.6;
+
+
+
+  .hero-image img {
+    max-width: 250px;
+    max-height: 300px;
   }
-  
-  .client-bio button {
-    margin-top: 1rem;
-    padding: 0.75rem 1.5rem;
-    background-color: #222;
-    color: #fff;
-    border: none;
-    border-radius: 0.5rem;
-    cursor: pointer;
+
+  .social-icons img {
+    width: 28px;
+    height: 28px;
   }
-  
-  .client-bio button:hover {
-    background-color: #444;
-  }
-  
+}

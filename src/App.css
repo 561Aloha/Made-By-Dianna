@@ -5,9 +5,6 @@
   text-align: center;
   background-color: rgb(36, 36, 36);
 }
-#intro canvas {
-  pointer-events: none;
-}
 
 .main-head {
   position: relative; 
@@ -49,9 +46,9 @@
 .button-grp button{
   margin-right: 10px;
   margin-top: 32px;
-  color: black;
-  color: white;
-  border: #ffffff 1px solid;
+  color: rgb(212, 212, 212);
+  background-color:  rgba(39, 38, 41, 0.6);;
+  border: rgb(212, 212, 212) 1px solid;
 }
 
 .tech{
@@ -96,49 +93,6 @@
   padding:20px;
   margin-bottom: 10px;
 }
-/* 
-.cursor-overlay {
-  position: relative;
-  z-index: 0;
-}
-
-.cursor-circle {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background-color: white;
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  mix-blend-mode: difference;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  transition: transform 0.05s ease;
-} 
-  
-
-#intro{
-  height: 80vh;
-  position: relative;
-  width: 100%;
-  object-fit: cover;
-  padding: 0;
-  margin: 0;  
-  }
-  
-
-#intro canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  display: block;
-
-} */
 
 .social {
   margin-top: 24px;
@@ -322,32 +276,7 @@
  }  
 
  /* For mobile intro layout */
-.mobile-intro {
-  height: 85vh;
-  position: relative;
-  overflow: hidden;
-}
 
-/* Touch area at the bottom */
-.swipe-zone {
-  position: absolute;
-  bottom: 0;
-  height: 40vh;
-  width: 100%;
-  background: transparent;
-  z-index: 5;
-}
-
-.scroll-hint {
-  position: absolute;
-  bottom: 24px; 
-  width: 100%;
-  text-align: center;
-  font-size: 16px;
-  color: #ffffffcc;
-  animation: fadeHint 2s infinite alternate;
-  z-index: 10;
-}
 
 @keyframes fadeHint {
   from {

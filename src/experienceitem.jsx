@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './experience.css';
 
 function ExperienceItem({ job }) {
   return (
@@ -9,7 +9,7 @@ function ExperienceItem({ job }) {
       </div>
       <div className="experience-right">
         <h3>{job.title} </h3>
-        <h3>{job.company}</h3>
+        <h4>{job.company}</h4>
         <p className="job-description">{job.shortDescription}</p>
         <ul className="job-duties">
           {job.description.map((duty, index) => (

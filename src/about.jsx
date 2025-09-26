@@ -5,6 +5,7 @@ import linkedin from "./assets/linkedin-b.png"
 import github from "./assets/github-b.png"
 import me from "./assets/me.jpeg";
 import { NavBar } from './App';
+import Experience from './experience';
 
 const HeroSection = () => (
   <section className="hero-section">
@@ -31,58 +32,13 @@ const HeroSection = () => (
   </section>
 );
 
-// const PortfolioSection = () => (
-//   <section className="portfolio-section">
-//     <h2>My Portfolio Work</h2>
-//     <p>
-//       As I continue to diversify my skills, you can click below to see some of my most recent portfolio work
-//     </p>
-//     <div className="portfolio-cards">
-//       <div className="card">
-//         <img src="/images/blog1.jpg" alt="Blog 1" />
-//         <p>IN</p>
-//       </div>
-//       <div className="card">
-//         <img src="/images/blog2.jpg" alt="Blog 2" />
-//         <p>Grow Your Blog Community</p>
-//       </div>
-//       <div className="card">
-//         <img src="/images/blog3.jpg" alt="Blog 3" />
-//         <p>Design a Beautiful Blog</p>
-//       </div>
-//     </div>
-//   </section>
-// );
-
-// const ClientFeature = () => (
-//   <section className="client-feature">
-//     <div className="client-image">
-//       <img src="/images/kristen.jpg" alt="Kristen" />
-//     </div>
-//     <div className="client-bio">
-//       <h3>Meet Kristen</h3>
-//       <p>Registered Nurse, BCCNP</p>
-//       <p>Holistic Nutritionist, NNCP</p>
-//       <p>Photographer</p>
-//       <p>Victoria, BC</p>
-//       <p>
-//         Hey guys, I'm Kristen, a nurse with a passion for healthy food and photography.
-//         On a photography note, if you're new to the social media game and are looking for
-//         dark + moody photos with a west coast flair to reflect yourself, your brand, or your product,
-//         I'm your girl.
-//       </p>
-//       <button>Let's Connect</button>
-//     </div>
-//   </section>
-// );
 
 const AboutMe = () => (
   <div>
 
     <NavBar />
     <HeroSection />
-    {/* <PortfolioSection />
-    <ClientFeature /> */}
+    <Experience />
   </div>
 );
 
