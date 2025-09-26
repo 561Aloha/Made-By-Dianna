@@ -20,10 +20,6 @@ function Footer() {
         </div>
 
         <div className="hello">
-            {/* <Link to="/">Home</Link>
-            <Link to="/projects">Software Projects</Link>
-            <Link to="/uxdesign">UX Projects</Link>
-            <Link to="/contact">Contact</Link> */}
             <div className="social">
                 <Link to='https://www.instagram.com/madebydianna'><img src={instagram}></img></Link>
                 <Link to='https://www.linkedin.com/diannad'><img src={linkedin}></img></Link>
