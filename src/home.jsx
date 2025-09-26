@@ -5,7 +5,6 @@ import Footer from './footer';
 
 import React, { useEffect, useRef } from "react";
 import './intro.css';
-import Experience from './experience';
 
 function Home() {
     const featuredRef = useRef(null);
