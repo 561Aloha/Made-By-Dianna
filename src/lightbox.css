@@ -40,9 +40,6 @@
     }
 }
 
-
-
-
 .lightbox-overlay {
     position: fixed;
     top: 0;
@@ -69,7 +66,7 @@
     z-index: 9999;
     animation: fadeIn 0.8s ease-in-out;
     transition: opacity 0.8s ease-in-out;
-    border-radius: 16px;
+    border-radius: 12px;
     color: white;
     display: flex;
     flex-direction: column;

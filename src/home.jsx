@@ -1,10 +1,11 @@
 import Intro from './intro';
 import Featured from './featured';
-import Tech from './tech';
+import Tech from './tech';;
 import Footer from './footer';
-
 import React, { useEffect, useRef } from "react";
 import './intro.css';
+import ScrollingCarousel from './ScrollingCarousel';
+import UxHome from './uxdesign/projectitems';
 
 function Home() {
     const featuredRef = useRef(null);
@@ -26,6 +27,7 @@ function Home() {
         }
     }, []);
     return (
+        <div>
         <div className="home-background" ref={containerRef}>
             <canvas className="home-fluid-canvas" ref={canvasRef} />
             <div className="home-content">
@@ -36,9 +38,13 @@ function Home() {
                 <Featured />
                 </section>
                 <Tech />
-                <Footer />
+
             </div>
+            <UxHome/>
+            <Footer transparent={true} />
         </div>
+
+    </div>
     );
 }
 

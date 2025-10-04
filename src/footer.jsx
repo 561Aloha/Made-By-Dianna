@@ -6,27 +6,28 @@ import instagram from "./assets/instagram-b.png"
 import linkedin from "./assets/linkedin-b.png"
 import github from "./assets/github-b.png"
 
-function Footer() {
+const Footer = ({ transparent = false }) => {
     return(
         <>
-        <hr/>
+        <footer  className={transparent ? 'footer-transparent' : 'footer-solid'}>
+            <hr/>
+            <div className="together">
+            <div className="column-b"> 
+            <h2>Get In Touch.</h2>
+            <h4>Feel free to reach out if you want to collaborate with us, or simply have a chat.</h4>
+            <h4>Contact@MadeByDianna.com</h4>
 
-        <div className="together">
-        <div className="column-b"> 
-        <h2>Get In Touch.</h2>
-        <h4>Feel free to reach out if you want to collaborate with us, or simply have a chat.</h4>
-        <h4>Contact@MadeByDianna.com</h4>
-
-        </div>
-
-        <div className="hello">
-            <div className="social">
-                <Link to='https://www.instagram.com/madebydianna'><img src={instagram}></img></Link>
-                <Link to='https://www.linkedin.com/diannad'><img src={linkedin}></img></Link>
-                <Link to='https://www.github.com/561Aloha'>  <img src={github}></img></Link>
             </div>
-        </div>
-        </div>
+
+            <div className="hello">
+                <div className="social">
+                    <Link to='https://www.instagram.com/madebydianna'><img src={instagram}></img></Link>
+                    <Link to='https://www.linkedin.com/diannad'><img src={linkedin}></img></Link>
+                    <Link to='https://www.github.com/561Aloha'>  <img src={github}></img></Link>
+                </div>
+            </div>
+            </div>
+        </footer>
         </>
     )
 

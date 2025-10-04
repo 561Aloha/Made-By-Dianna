@@ -1,5 +1,5 @@
 import React from 'react';
-import './experience.css';
+import './css/experience.css';
 
 const experienceData = [
   {
@@ -59,20 +59,26 @@ const experienceData = [
   },
 ];
 
-// ✅ ExperienceItem defined inline here
 function ExperienceItem({ job }) {
   return (
     <div className="experience-item">
-      <h3>{job.title}</h3>
-      <h4>{job.company}</h4>
-      <p className="experience-date">{job.date}</p>
-      <p className="experience-short">{job.shortDescription}</p>
-      <ul>
+      <div className="header">
+        <div className="titleGroup">
+          <h3 className="title">{job.title}</h3>
+          <h4 className="company">{job.company}</h4>
+        </div>
+        <p className="date">{job.date}</p>
+      </div>
+
+      <p className="shortDescription">{job.shortDescription}</p>
+
+      <ul className="list">
         {job.description.map((point, i) => (
-          <li key={i}>{point}</li>
+          <li key={i} className="listItem">{point}</li>
         ))}
       </ul>
-      <div className="experience-badges">
+
+      <div className="badges">
         {job.badges.map((badge, i) => (
           <span key={i} className="badge">{badge}</span>
         ))}
@@ -83,7 +89,7 @@ function ExperienceItem({ job }) {
 
 function Experience() {
   return (
-    <section id="experience">
+    <section className="experience">
       <h2 className="experience-title">Experience</h2>
       <div className="experience-container">
         {experienceData.map((job, index) => (

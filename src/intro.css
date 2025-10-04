@@ -25,7 +25,6 @@
   line-height: 0;
 }
 
-/* Fade-In Animations */
 .fade-up, .fadde-up {
   opacity: 0;
   transition: opacity 0.5s ease-out, transform 1s ease-out;
@@ -49,19 +48,40 @@
   filter: blur(0);
 }
 
-/* Button Group */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity .5s ease-out, transform 1s ease-out;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fadde-up {
+  opacity: 0;
+  filter: blur(10px);
+  transition: opacity .5s ease-out, transform .5s ease-out, filter .5s ease-out;
+}
+
+.fadde-up.show {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
 .button-grp button {
   margin-right: 10px;
   margin-top: 32px;
-  border: 1px solid #ffffff;
-  color: white;
+  color: rgb(212, 212, 212);
+  background-color:  rgba(39, 38, 41, 0.6);
+  border: rgb(212, 212, 212) 1px solid;
 }
 
 .button-grp a {
   pointer-events: auto;
 }
 
-/* Fluid Canvas */
 .fluid-canvas, .home-fluid-canvas {
   position: absolute;
   top: 0;
@@ -112,7 +132,6 @@
 
   .button-grp button{
     padding: 5px 10px;
-    border-radius: 4px;
     margin-left: 5px;
     margin-right: 5px;
   }
@@ -167,15 +186,11 @@
   }
 
   .button-grp button {
-      margin: 0;
+    margin: 0;
   }
 }
 
 @media (max-width: 400px) {
-  .navbar {
-      margin-left: 12px;
-  }
-
   .main-head {
       margin-left: 0;
       width: 80%;

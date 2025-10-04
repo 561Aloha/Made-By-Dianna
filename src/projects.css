@@ -17,9 +17,9 @@
 }
 
 .multi-select-button {
-    padding: 10px 20px;
-    border: 2px solid #ffffff;
-    color: rgb(194, 194, 194);
+    padding: 6px 12px;
+    border: 2px solid #bababa;
+    color: rgb(229, 229, 229);
     border-radius: 5px;
     background-color: transparent;
     cursor: pointer;
@@ -57,10 +57,10 @@
     background-color: #282525;
     width: 30px;
     padding: 20px;
-    margin: 10px; /* Spacing between project cards */
-    border: 2px solid #ffffff;
-    border-radius: 5px; /* Optional: Subtle background */
-    border-radius: 5px; /* Optional: Rounded corners */
+    margin: 10px; 
+    border: 2px solid #bababa;
+    border-radius: 5px; 
+    border-radius: 5px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -79,25 +79,25 @@
 
 .project-card div {
     font-size: 16px;
-    line-height: 1.2; /* Spacing for the skills list */
-    color: #333; /* High contrast for readability */
-    margin-bottom: 10px; /* Space below skills */
+    line-height: 1.2;
+    color: #333;
+    margin-bottom: 10px;
 }
 
 .skills {
     display: flex;
     flex-wrap: wrap; 
     gap: 8px; 
-    margin-top: 10px; /* Space above skills section */
+    margin-top: 10px; 
 }
 
 .skill-badge {
-    background-color: #cbd7f8; /* Light background */
-    color: #333; /* Dark text for contrast */
-    padding: 5px 10px; /* Padding inside the badge */
-    border-radius: 8px; /* Rounded corners for rectangle look */
-    font-size: 14px; /* Adjust font size */
-    cursor: default; /* Disable pointer cursor */
+    background-color: #cbd7f8; 
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 8px; 
+    font-size: 14px;
+    cursor: default;
 }
 
 .skill-badge.React\.js { background-color: #3a86ff; color: #fff; }
@@ -224,29 +224,20 @@
 
 }
 
-
-/* 
-.projects-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
-    max-width: 780px;
-    margin: 0 auto;
-    box-sizing: border-box;
-    margin-left: 48px;
-    place-items: center;
-  }
-   */
 @media (max-width: 1500px) {
     .projects-list {
         grid-template-columns: repeat(3, 1fr);
         width: 80vw;
         flex-wrap: wrap;
     }
-
     .project-card {
         padding: 20px;
-
     }
-    
+}
+
+
+.entire-page{
+    background-color: black;
+    margin-bottom: -20em;
+    padding-bottom: 20em;
 }

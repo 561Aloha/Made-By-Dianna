@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import './uxdesign.css';
+import './css/uxdesign.css';
 import frame1 from './nature/frames/frame1.png';
 import frame2 from './nature/frames/frame2.png';
 import frame3 from './nature/frames/frame3.png';
@@ -33,12 +33,9 @@ const carousel = () => {
 
     return (
         <div className='carousel-container' ref={carouselRef} style={{ display: 'flex', alignItems: 'center', overflowX: 'auto', scrollBehavior: 'smooth' }}>
-            {/* <img className='left' src="./src/assets/arrow-left.svg" alt="Previous" onClick={goToPrevious} /> */}
-                  {images.map((src, index) => (
+            {images.map((src, index) => (
                 <img key={index} src={src} alt={`Slide ${index}`} style={{ width: '250px', height: 'auto', marginRight: '20px' }} />
-            ))}
-            {/* <img className='right' src="./src/assets/arrow-right.svg" alt="Next" onClick={goToNext}  /> */}
-        </div>
+            ))}        </div>
     );
 };
 

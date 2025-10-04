@@ -1,4 +1,3 @@
-
 .nav-title {
     font-size: 24px;
     font-weight: bold;
@@ -6,7 +5,6 @@
 .menu-items{
     font-size: 18px;
     pointer-events: auto;
-    padding: 10px 10px;
   }
 
 .hamburger{
@@ -54,58 +52,46 @@
     font-weight: bold;
     transition: color 0.3s ease;
   }
-.menu-overlay a:hover {
-    color: #0015ff;
-  }
-.menu-items a{
-    font-size: 15px;
-    padding: 10px;
-    background-color: #0015ff;
-    margin-left: 10px;
-    border-radius: 12px;
-}
+
 .navbar img {
-    width: 48px;
-    height: 48px;
+    width: 50px;
+    height: 50px;
     background-color: #ffffff;
     object-fit: cover;
-    border-radius: 15px;
+    border-radius: 12px;
+    margin-top: 8px;
+
     border: 1px solid white;
   }
 .menu-items {
     display: flex;
     align-items: center;
-    padding:0;
     margin-left: 10px;
-    border-radius: 15px;
+    border-radius: 12px;
+    max-height: 48px;
     border: 1px solid white;
   }
   
 .menu-items a:hover {
-    font-size: 15px;
-    margin-left: 10px;
     background-color: #2a2a2a;
-    border-radius: 12px;
     color: white;
-    padding:13px;
-    /* border:white 1px solid; */
     text-decoration: none;
   }  
 .menu-items a{
-    font-size: 15px;
-    margin-left: 10px;
+    font-size: 16px;
+    margin-left: 12px;
     background-color: transparent;
     border-radius: 12px;
     color: white;
-    padding:13px;
-    /* border:white 1px solid; */
+    padding:12px;
     text-decoration: none;
   }
-
+.menu-items a:first-child{
+    margin-left: 0;
+  }
 
 .navbar {
   display: flex;
-  height: 50px; 
   justify-content: space-between;
   width: 20%;
   margin-left: 25px;
@@ -114,11 +100,11 @@
   z-index: 100; 
   top: 0;
   padding: 0 20px;
-  height: 70px; /* slightly more height for space */
+  height: 70px;
 }
 
 
-@media (max-width: 400px){
+@media (max-width: 600px){
  .navbar{
   margin-left: 12px;
  }

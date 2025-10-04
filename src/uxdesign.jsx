@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import leftArrow from './nature/arrow-right.svg'; // Make sure to add the arrow images in your project
 import rightArrow from './nature/arrow-right.svg';
-import './uxdesign.css';
+import './css/uxdesign.css';
 import chipotleImage from './nature/chipotle.jpg';
 import starbooksImage from './nature/starbucks.jpg';
 import lightening from './nature/lightning.svg';

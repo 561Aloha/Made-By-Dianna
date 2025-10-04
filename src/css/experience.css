@@ -1,0 +1,166 @@
+#experience {
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  padding: 4rem 2rem;
+}
+
+.experience-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.experience-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.experience-item {
+  background-color: #111;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #333;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.experience-item:hover {
+  transform: translateY(-4px);
+  border-color: #555;
+}
+
+.experience-item .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.experience-item .header > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.experience-item h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.experience-item h4 {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin: 0;
+  color: #888;
+  line-height: 1.2;
+}
+
+.experience-date {
+  font-size: 0.875rem;
+  color: #666;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.experience-short {
+  font-size: 1rem;
+  color: #bbb;
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
+}
+
+.experience-item ul {
+  margin: 0 0 1.5rem 0;
+  padding-left: 1.5rem;
+  list-style-type: disc;
+}
+
+.experience-item li {
+  font-size: 0.95rem;
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.experience-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.badge {
+  background-color: #222;
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid #444;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  #experience {
+    padding: 3rem 1.5rem;
+  }
+  
+  .experience-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .experience-item {
+    padding: 1.5rem;
+  }
+  
+  .experience-item .header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .experience-item h3 {
+    font-size: 1.25rem;
+  }
+  
+  .experience-item h4 {
+    font-size: 1rem;
+  }
+  
+  .experience-date {
+    align-self: flex-start;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  #experience {
+    padding: 2rem 1rem;
+  }
+  
+  .experience-title {
+    font-size: 1.75rem;
+  }
+  
+  .experience-item {
+    padding: 1.25rem;
+  }
+  
+  .experience-item h3 {
+    font-size: 1.125rem;
+  }
+  
+  .experience-container {
+    gap: 2rem;
+  }
+}

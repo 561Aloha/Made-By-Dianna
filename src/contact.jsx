@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import './contact.css';
+import './css/contact.css';
 import { NavBar } from './App';
+import Footer from './footer.jsx';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -106,9 +107,10 @@ const Contact = () => {
 
       <button type="submit">Send</button>
     </form>
-
+    <Footer transparent={true} />
     </div>
   );
 };
 
 export default Contact;
+

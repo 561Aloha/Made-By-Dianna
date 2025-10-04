@@ -6,25 +6,6 @@
   background-color: rgb(36, 36, 36);
 }
 
-.main-head {
-  position: relative; 
-  z-index: 1;
-  background-color: transparent; 
-  width: 50%;
-  padding: 48px;
-  margin-top: 48px;
-  text-align: left;
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
@@ -32,23 +13,6 @@
 }
 .card {
   padding: 2em;
-}
-.main-head h4{
-  padding:0;
-  margin: 0;
-  line-height: 0;
-  font-size: 18px;
-}
-.main-head h2{
-  line-height: 0;
-  font-size: 48px;
-}
-.button-grp button{
-  margin-right: 10px;
-  margin-top: 32px;
-  color: rgb(212, 212, 212);
-  background-color:  rgba(39, 38, 41, 0.6);;
-  border: rgb(212, 212, 212) 1px solid;
 }
 
 .tech{
@@ -101,7 +65,8 @@
   align-items: center;
   justify-content: center;
   justify-content: flex-start;
-  filter: invert(90)
+  pointer-events: auto;
+  filter: invert(90%);
 }
 .hello a{
   color: white;
@@ -144,7 +109,6 @@
 }
 
 @media (max-width:800px) {
-
   #intro{
     position: "relative";
     width: 100%;
@@ -190,7 +154,6 @@
     margin-bottom: 0;
     padding-bottom: 0;
   }
-
 }
 
 .fluid-canvas {
@@ -203,38 +166,14 @@
   pointer-events: none;
 }
 
-.fade-up {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity .5s ease-out, transform 1s ease-out;
-}
 
-.fade-up.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.fadde-up {
-  opacity: 0;
-  filter: blur(10px);
-  transition: opacity .5s ease-out, transform .5s ease-out, filter .5s ease-out;
-}
-
-.fadde-up.show {
-  opacity: 1;
-  transform: translateY(0);
-  filter: blur(0);
-}
 
 @media (max-width:800px){
   .main-head h2{
     font-size: 36px;
     width: 70vw;
   }
-  .button-grp button{
-    padding: 10px;
-    background-color: black;
-  }
+
 }
 
 .button-grp a{
@@ -244,14 +183,10 @@
 .me{
   width:300px;
   height:auto;
-  border-radius: 14px;
+  border-radius: 12px;
 }
 
-
 @media (max-width: 500px){
-  .navbar{
-   margin-left: 12px;
-  }
   .main-head{
     margin-left: 0;
     width: 100%;
@@ -275,9 +210,6 @@
   }
  }  
 
- /* For mobile intro layout */
-
-
 @keyframes fadeHint {
   from {
     opacity: 0.3;
@@ -286,7 +218,6 @@
     opacity: 1;
   }
 }
-
 
 .programming {
   background-color: #58e25b;
@@ -303,6 +234,3 @@
 .database {
   background-color: #ddee49; 
 }
-
-
-

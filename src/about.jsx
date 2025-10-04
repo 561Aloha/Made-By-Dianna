@@ -1,11 +1,11 @@
 import React from 'react';
-import './aboutme.css';
+import './css/aboutme.css';
 import instagram from "./assets/instagram-b.png"
 import linkedin from "./assets/linkedin-b.png"
 import github from "./assets/github-b.png"
 import me from "./assets/me.jpeg";
 import { NavBar } from './App';
-import Experience from './experience';
+
 
 const HeroSection = () => (
   <section className="hero-section">
@@ -19,11 +19,9 @@ const HeroSection = () => (
         3D models that can be used in the metaverse!
       </p>
       <div className="social-icons">
-  
-                <img src={instagram}></img>
-                <img src={linkedin}></img>
-                <img src={github}></img>
-   
+          <img src={instagram}></img>
+          <img src={linkedin}></img>
+          <img src={github}></img>
       </div>
     </div>
     <div className="hero-image">
@@ -32,13 +30,11 @@ const HeroSection = () => (
   </section>
 );
 
-
 const AboutMe = () => (
   <div>
-
     <NavBar />
     <HeroSection />
-    <Experience />
+
   </div>
 );
 

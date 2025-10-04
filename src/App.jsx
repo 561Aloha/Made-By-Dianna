@@ -2,7 +2,7 @@ import {useRoutes, useNavigate, useLocation, Link} from 'react-router-dom';
 import React, { useState, useEffect} from "react";
 
 import './App.css';
-import './navbar.css';
+import './css/navbar.css';
 import Home from './home';
 import Contact from './contact';
 import UXDesign from './uxdesign';
@@ -10,7 +10,6 @@ import logo from './assets/logo-d.png';
 import CustomCursor from './customcusor';
 import Projects from './projects';
 import AboutMe from './about';
-
 
 export function NavBar() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -28,9 +27,7 @@ export function NavBar() {
           <Link to="/">Home</Link>
           <Link to="/projects">Projects</Link>
           <Link to="/contact">Contact</Link>
-          {/* <Link to="/about">About</Link> */}
         </div>
-
       </nav>
     );
 }
@@ -58,11 +55,11 @@ function App() {
       { path: "/naturesway", element: <UXDesign /> },
       { path: "/about", element: <AboutMe /> },
     ]);
+
   return (
     <>
-
-   <main>{element}</main>
-  </>
+      <main>{element}</main>
+    </>
   
   )
 }

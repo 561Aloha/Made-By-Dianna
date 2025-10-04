@@ -4,6 +4,7 @@ import './projects.css';
 import arrow from './assets/link-external.png';
 import catWorking from './assets/catworking.gif';
 import { NavBar } from './App.jsx'; 
+import Footer from './footer.jsx';
 
 function Projects() { 
     const [selected, setSelected] = useState([]);
@@ -130,6 +131,7 @@ function Projects() {
                     )}
                 </div>
                 </div>
+                <Footer transparent={false} />
                 </div>
         );
     }

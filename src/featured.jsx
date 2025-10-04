@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import "./featured.css";
+import "./css/featured.css";
 import { Link } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
 import projVideo from "./assets/expand.mp4";
@@ -59,7 +59,7 @@ function Featured() {
       <div className="proj-section">
         <div>
           <h3>Featured Projects</h3>
-          <p>These are some of the projects I've worked on.</p>
+          <p>These are some of the projects I've built!</p>
         </div>
         <Link to="/projects">
           <button>View All</button>
@@ -82,21 +82,20 @@ function Featured() {
             />
           </div>
           <div className={`leftProj ${rowInView ? "fade-in" : ""}`}>
-            <h4>Expand Project</h4>
+            <h4>Zeno Habit Tracker</h4>
             <h5>
-              Expand is a project that demonstrates autoplay videos triggered
-              when scrolled into view.
+              Zeno is a full stack web application designed to help users maintain positive habits.
             </h5>
+            <div className="button-group" style={{opacity: showButtons ? 1 : 0, transition: "opacity 0.5s ease-in-out" }}>
             <a href="https://habittrack.netlify.app" target="_blank" rel="noopener noreferrer">
               <button>Visit Project</button>
             </a>
             <a href="https://github.com/561Aloha/Habit-Tracker/" target="_blank" rel="noopener noreferrer">
               <button>Visit Github</button>
-            </a>
+            </a></div>
           </div>
         </div>
 
-        {/* Second Project */}
         <div className="featured">
           <div className="img-proj" ref={video2InViewRef}>
             <video
@@ -117,12 +116,14 @@ function Featured() {
               tracking your favorite coins and managing your portfolio with
               real-time updates.
             </h5>
+            <div className="button-group" style={{opacity: showButtons ? 1 : 0, transition: "opacity 0.5s ease-in-out" }}>
             <a href="https://crypto-valley.netlify.app" target="_blank" rel="noopener noreferrer">
               <button>View Project</button>
             </a>
             <a href="https://github.com/561Aloha/CryptoHustle" target="_blank" rel="noopener noreferrer">
               <button>View Github</button>
             </a>
+            </div>
           </div>
         </div>
       </div>

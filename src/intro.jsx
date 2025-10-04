@@ -119,7 +119,7 @@ function Intro({featuredRef}) {
                             if (diffY > 50 && featuredRef?.current) {
                                 featuredRef.current.scrollIntoView({ behavior: 'smooth' });
                                 document.body.style.overflow = 'auto';
-                                setShouldShowMobileIntro(false); // Disable mobile intro after swipe
+                                setShouldShowMobileIntro(false);
                             }
                         }}
                     />
