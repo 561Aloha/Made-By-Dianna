@@ -1,6 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './uxDesign.css';
-
+import photo1 from '/src/assets/2.png';
+import photo2 from '/src/assets/3.png';
+import video1 from '/src/assets/IAIP.mp4';
+import photo3 from '/src/assets/4.png';
 const UxHome = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const contentItemsRef = useRef([]);
@@ -11,7 +14,7 @@ const UxHome = () => {
       id: 1,
       title: 'Spotify Redesign & Branding',
       description: 'A personal project where I redesigned Spotify\'s user interface and focused on implementing a new feature',
-      image: 'src/assets/2.png',      
+      image: photo1,      
       type: 'image',
       button: 'View Project',    
       link: 'https://www.figma.com/deck/Bzbavt4OouWH6zYyLjbPau/Spotify?node-id=1-34&t=MZXpC3Lrx9Ut5pOu-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1' 
@@ -20,8 +23,8 @@ const UxHome = () => {
       id: 2,
       title: 'Clinique Redesign',
       description: 'My internship at Clinique involved redesigning the product detail page to enhance user experience and align with the brand\'s aesthetic.',
-      image: 'src/assets/3.png', 
-      button: 'View Project',    
+      image: photo2,
+      button: 'View Project',
       type: 'image',
       link: 'https://www.figma.com/deck/xUgTBAHkE1CCPVjn3loS1d/Clinique-Redesign-PDP?node-id=1-26&t=0ZuqOZSdNfvdWH8O-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1'
     },
@@ -29,7 +32,7 @@ const UxHome = () => {
       id: 3,
       title: 'Islamic Psyschology Web Design',
       description: 'A nonprofit organization that hired me to design their website with their new brandbook',
-      video: '/src/assets/IAIP.mp4',
+      video: video1,
       // poster: 'https://cdn.prod.website-files.com/6772f6efe246aaaa73ad2a98/680fe798787014a8faa8758c_NB-Coin-Thumbnail.webp',
       type: 'video',
 
@@ -40,7 +43,7 @@ const UxHome = () => {
       id: 4,
       title: 'Natures way Cafe',
       description: 'My first high-fidelity prototype where I learned about UX Design from Google\'s Coursea course. A mobile application for a healthy cafe to order food and drinks.',
-      image: '/src/assets/4.png',
+      image: photo3,
       // srcset: '/assets/3.png 500w, /assets/3.png 1440w',
       type: 'image',
       button: 'View Project',
