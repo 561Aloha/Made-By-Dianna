@@ -1,5 +1,5 @@
 import React from "react";
-import './multiselectdropdown.css';
+import './css/multiselectdropdown.css';
 import Dropdown from './assets/dropdown.png';
 
 const MultiSelectDropdown = ({ options, selected, toggleOption }) => {

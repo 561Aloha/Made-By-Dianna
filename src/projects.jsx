@@ -1,6 +1,6 @@
 
 import React, { useState } from "react";
-import './projects.css';
+import './css/projects.css';
 import arrow from './assets/link-external.png';
 import catWorking from './assets/catworking.gif';
 import { NavBar } from './App.jsx'; 

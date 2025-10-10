@@ -1,9 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import './App.css';
-import './intro.css';
+import './css/intro.css';
 import { Link } from "react-router-dom";
 import { NavBar } from './App.jsx'; 
-
 function Intro({featuredRef}) {
     const sectionRef = useRef(null);
     const containerRef = useRef(null);

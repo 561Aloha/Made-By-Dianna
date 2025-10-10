@@ -6,6 +6,7 @@ import instagram from "./assets/instagram-b.png"
 import linkedin from "./assets/linkedin-b.png"
 import github from "./assets/github-b.png"
 
+
 const Footer = ({ transparent = false }) => {
     return(
         <>

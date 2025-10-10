@@ -3,9 +3,10 @@ import Featured from './featured';
 import Tech from './tech';;
 import Footer from './footer';
 import React, { useEffect, useRef } from "react";
-import './intro.css';
+import './css/intro.css';
 import ScrollingCarousel from './ScrollingCarousel';
 import UxHome from './uxdesign/projectitems';
+import MainChat from './components/AI ChatBot/main_chat';
 
 function Home() {
     const featuredRef = useRef(null);
@@ -41,6 +42,16 @@ function Home() {
 
             </div>
             <UxHome/>
+            <div 
+                onMouseMove={(e) => e.stopPropagation()}
+                onMouseDown={(e) => e.stopPropagation()}
+                onMouseUp={(e) => e.stopPropagation()}
+                onClick={(e) => e.stopPropagation()}
+                onKeyDown={(e) => e.stopPropagation()}
+                onKeyUp={(e) => e.stopPropagation()}
+                style={{ position: 'relative', zIndex: 10 }}
+                ><MainChat /></div>
+
             <Footer transparent={true} />
         </div>
 
