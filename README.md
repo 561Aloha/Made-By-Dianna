@@ -1,6 +1,6 @@
 �Portfolio Website - Made by Dianna
 A modern, interactive portfolio website showcasing software development projects, UX design work, and professional experience. Features an AI-powered chatbot, fluid simulation backgrounds, and responsive design.
-🔗 Live Site: MadeByDianna.com
+🔗 [Live Site](https://madebydianna.com)
 ✨ Features
 
 Interactive Fluid Simulation - WebGL-powered fluid dynamics background
@@ -115,20 +115,12 @@ CORS-enabled
 The site is deployed on Netlify with automatic deployments from the main branch.
 Deploy to Netlify
 
-Connect your repository to Netlify
-Set environment variables in Netlify dashboard:
-
-VITE_API_KEY
-EMAIL_USER
-EMAIL_PASS
-
 
 Build settings:
 
 Build command: npm run build
 Publish directory: dist
 Functions directory: netlify/functions
-
 
 
 📧 Contact Form Setup
@@ -154,13 +146,6 @@ Chatbot interactions
 Button clicks
 Project views
 
-🎯 Browser Support
-
-Chrome (recommended)
-Firefox
-Safari
-Edge
-Mobile browsers (iOS Safari, Chrome Mobile)
 
 📝 License
 This project is © 2025 Dianna Dimambro. All rights reserved.
