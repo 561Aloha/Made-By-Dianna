@@ -1,7 +1,14 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-if (!import.meta.env.VITE_API_KEY) {
-  throw new Error("VITE_API_KEY environment variable not set");
-}
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
-export const ai = new GoogleGenerativeAI(import.meta.env.VITE_API_KEY);
+export async function handler(event) {
+  const { prompt } = JSON.parse(event.body || "{}");
+  const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+  const result = await model.generateContent(prompt);
+
+  return {
+    statusCode: 200,
+    body: JSON.stringify(result.response),
+  };
+}

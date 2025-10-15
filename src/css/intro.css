@@ -123,11 +123,13 @@
       position: relative;
       width: 100%;
   }
-
   .main-head h2 {
-      font-size: 36px;
-      width: 70vw;
+      font-size: 32px;
+      width: 90vw;
       pointer-events: none;
+      word-wrap: break-word; /* Allow text to wrap */
+      overflow-wrap: break-word; /* Better word breaking */
+      max-width: 100%; /* Prevent overflow */
   }
 
   .button-grp button{
@@ -185,15 +187,50 @@
       pointer-events: auto;
   }
 
-  .button-grp button {
-    margin: 0;
+  .main-head p{
+    font-size: 14px;
+    width: 70%;
+    color: rgb(200, 200, 200);
+    margin-top: 12px;
+    line-height: 1.2;
+  }
+  .main-head{
+    padding: 12px;
+    width: 100%;
+    margin-top: 24px;
+    margin-left: 12px;
+  }
+
+  .mobile-intro {
+    height: 85vh;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .swipe-zone {
+    position: absolute;
+    bottom: 0;
+    height: 40vh;
+    width: 100%;
+    background: transparent;
+    z-index: 5;
+  }
+
+  .scroll-hint {
+    position: absolute;
+    bottom: 24px; 
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    color: #ffffffcc;
+    animation: fadeHint 2s infinite alternate;
+    z-index: 10;
   }
 }
 
 @media (max-width: 400px) {
   .main-head {
-      margin-left: 0;
-      width: 80%;
+      width: 100%;
   }
 
   .intro {
@@ -211,38 +248,11 @@
   .button-grp button {
       margin-top: 0;
   }
-  .main-head{
-    width: 60%;
-  }
 
   .main-head p{
-    width: 100%;
-    padding:0;
+    width: 80%;
   }
-}
-
-.mobile-intro {
-  height: 85vh;
-  position: relative;
-  overflow: hidden;
-}
-
-.swipe-zone {
-  position: absolute;
-  bottom: 0;
-  height: 40vh;
-  width: 100%;
-  background: transparent;
-  z-index: 5;
-}
-
-.scroll-hint {
-  position: absolute;
-  bottom: 24px; 
-  width: 100%;
-  text-align: center;
-  font-size: 16px;
-  color: #ffffffcc;
-  animation: fadeHint 2s infinite alternate;
-  z-index: 10;
+  .navbar{
+      margin-left: 12px;
+  }
 }
