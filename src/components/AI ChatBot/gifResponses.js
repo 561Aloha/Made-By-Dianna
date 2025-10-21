@@ -3,38 +3,37 @@ export const GIF_RESPONSES = {
   scared: [
     'https://media.giphy.com/media/51Uiuy5QBZNkoF3b2Z/giphy.gif',
     'https://media.giphy.com/media/qLuH5N5J1sMVy/giphy.gif',
-
-    'https://giphy.com/gifs/spongebob-season-4-spongebob-squarepants-3ofSBoGaRAsrGTbb56',
     'https://giphy.com/gifs/scared-family-guy-stewie-cEOG7nGA7448M',
+    'https://media.giphy.com/media/3ofSBoGaRAsrGTbb56/giphy.gif',
+    'https://media.giphy.com/media/cEOG7nGA7448M/giphy.gif',
   ],
   sorry: [
     'https://media.giphy.com/media/LxfdG9kpkLIoOiDVRR/giphy.gif',
     'https://media.giphy.com/media/tLEUIoocdm8D2YWgs1/giphy.gif',
     'https://media.giphy.com/media/XJCL959KwYbE4/giphy.gif'
   ],
-  sexy:[
-    'https://giphy.com/gifs/spongebob-season-4-spongebob-squarepants-3ofSBoGaRAsrGTbb56',
-    'https://giphy.com/gifs/scared-family-guy-stewie-cEOG7nGA7448M',
+  sexy: [
+    'https://media.giphy.com/media/3ofSBoGaRAsrGTbb56/giphy.gif',
+    'https://media.giphy.com/media/cEOG7nGA7448M/giphy.gif',
   ],
   sassy: [
     'https://media.giphy.com/media/h5YJdPfkSbcRO/giphy.gif',
-    'https://giphy.com/gifs/diva-snap-31wVvW0sOur7O',
-    'https://giphy.com/gifs/sassy-model-5WXqTFTgO9a7e',
-    'https://giphy.com/gifs/Skrz-cz-faint-skrzcz-skrzgif-i10BWKPj9txEBBwhPe',
-
+    'https://media.giphy.com/media/31wVvW0sOur7O/giphy.gif',
+    'https://media.giphy.com/media/5WXqTFTgO9a7e/giphy.gif',
+    'https://media.giphy.com/media/i10BWKPj9txEBBwhPe/giphy.gif',
   ],
   inappropriate: [
-    'https://giphy.com/gifs/show-just-premiere-MrdaOsKoKxjm8',
+    'https://media.giphy.com/media/MrdaOsKoKxjm8/giphy.gif',
     'https://media.giphy.com/media/Fjr6v88OPk7U4/giphy.gif',
-    'https://giphy.com/gifs/theoffice-nbc-the-office-tv-i0xGuo4o5PutVo0imJ',
-    'https://giphy.com/gifs/michael-scott-KajpERDjOpMcw',
-    'https://giphy.com/gifs/theoffice-the-office-tv-episode-822-L926v3LviBFpTjhBKS'
+    'https://media.giphy.com/media/i0xGuo4o5PutVo0imJ/giphy.gif',
+    'https://media.giphy.com/media/KajpERDjOpMcw/giphy.gif',
+    'https://media.giphy.com/media/L926v3LviBFpTjhBKS/giphy.gif'
   ],
   love: [
-    'https://giphy.com/gifs/mailchimp-thank-you-very-much-3o6fJ1l3Wr1ugMu1Rm',
-    'https://giphy.com/gifs/thanks-3osxYdXvsGw6wT5lIY',
+    'https://media.giphy.com/media/3o6fJ1l3Wr1ugMu1Rm/giphy.gif',
+    'https://media.giphy.com/media/3osxYdXvsGw6wT5lIY/giphy.gif',
     'https://media.giphy.com/media/mWVu0FoJuq6cg/giphy.gif',
-    'https://giphy.com/gifs/alice-in-wonderland-thank-you-xIJLgO6rizUJi',
+    'https://media.giphy.com/media/xIJLgO6rizUJi/giphy.gif',
   ],
   playful: [
     'https://media.giphy.com/media/AyCMc7Yr6kSCk/giphy.gif'
@@ -45,7 +44,7 @@ export const GIF_RESPONSES = {
   ],
   grouchy: [
     'https://media.giphy.com/media/ysNY0sgEnCoi4/giphy.gif',
-    'https://giphy.com/gifs/abcnetwork-lalala-not-listening-RFrbRIAAZANNK',
+    'https://media.giphy.com/media/RFrbRIAAZANNK/giphy.gif',
     'https://media.giphy.com/media/mD6E1qcEkrTD8oJV3w/giphy.gif'
   ]
 };
