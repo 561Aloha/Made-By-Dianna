@@ -5,7 +5,7 @@ import Footer from './footer';
 import React, { useEffect, useRef } from "react";
 import './css/intro.css';
 import ScrollingCarousel from './ScrollingCarousel';
-import UxHome from './uxdesign/projectitems';
+import UxHome from './components/uxdesign/projectitems';
 import MainChat from './components/AI ChatBot/main_chat';
 
 function Home() {

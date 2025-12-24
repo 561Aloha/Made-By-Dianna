@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
-import leftArrow from './nature/arrow-right.svg'; // Make sure to add the arrow images in your project
-import rightArrow from './nature/arrow-right.svg';
+import leftArrow from './assets/nature/arrow-right.svg' // Make sure to add the arrow images in your project
+import rightArrow from './assets/nature/arrow-right.svg';
 import './css/uxdesign.css';
-import chipotleImage from './nature/chipotle.jpg';
-import starbooksImage from './nature/starbucks.jpg';
-import lightening from './nature/lightning.svg';
-import star from './nature/star.svg';
-import smile from './nature/smile.svg';
+import chipotleImage from './assets/nature/chipotle.jpg';
+import starbooksImage from './assets/nature/starbucks.jpg';
+import lightening from './assets/nature/lightning.svg';
+import star from './assets/nature/star.svg';
+import smile from './assets/nature/smile.svg';
 import Carousel from './carousel.jsx';
-import slide1 from './nature/feature1.png';
-import slide2 from './nature/feature2.png';
-import slide3 from './nature/beforeafter.jpg';
-import slide4 from './nature/beforeafter1.jpg';
-import slide5 from './nature/beforeafter2.png';
+import slide1 from './assets/nature/feature1.png';
+import slide2 from './assets/nature/feature2.png';
+import slide3 from './assets/nature/beforeafter.jpg';
+import slide4 from './assets/nature/beforeafter1.jpg';
+import slide5 from './assets/nature/beforeafter2.png';
 import { NavBar } from './App.jsx';
 
   

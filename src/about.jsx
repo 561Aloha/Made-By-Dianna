@@ -6,7 +6,6 @@ import github from "./assets/github-b.png"
 import me from "./assets/me.jpeg";
 import { NavBar } from './App';
 
-
 const HeroSection = () => (
   <section className="hero-section">
     <div className="hero-text">

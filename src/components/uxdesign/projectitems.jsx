@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './uxDesign.css';
-import photo1 from '/src/assets/2.png';
-import photo2 from '/src/assets/3.png';
-import video1 from '/src/assets/IAIP.mp4';
-import photo3 from '/src/assets/4.png';
+import photo1 from '../../assets/2.png';
+import photo2 from '../../assets/3.png';
+import video1 from '../../assets/IAIP.mp4';
+import photo3 from '../../assets/4.png';
 const UxHome = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const contentItemsRef = useRef([]);

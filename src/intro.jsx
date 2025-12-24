@@ -99,7 +99,7 @@ function Intro({featuredRef}) {
                 <h4 className={`fade-up ${showWelcome ? 'show' : ''}`}>Welcome to</h4>
                 <h2 className={`fade-up ${showMadeBy ? 'show' : ''}`}>Made by Dianna</h2>
                 <p className={`fade-up ${showMadeBy ? 'show' : ''}`}>
-                    I'm a computer science graduate with experience in building<br />
+                    I'm a computer science graduate with experience in building
                     beautiful, user-friendly websites.
                 </p>
                 <div className={`button-grp fade-up ${showButtons ? 'show' : ''}`}>

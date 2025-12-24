@@ -3,7 +3,6 @@ export const GIF_RESPONSES = {
   scared: [
     'https://media.giphy.com/media/51Uiuy5QBZNkoF3b2Z/giphy.gif',
     'https://media.giphy.com/media/qLuH5N5J1sMVy/giphy.gif',
-    'https://giphy.com/gifs/scared-family-guy-stewie-cEOG7nGA7448M',
     'https://media.giphy.com/media/3ofSBoGaRAsrGTbb56/giphy.gif',
     'https://media.giphy.com/media/cEOG7nGA7448M/giphy.gif',
   ],
