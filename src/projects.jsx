@@ -4,6 +4,7 @@ import arrow from './assets/link-external.png';
 import catWorking from './assets/catworking.gif';
 import { NavBar } from './App.jsx'; 
 import Footer from './footer.jsx';
+import health from './assets/habit.png'
 
 function Projects() { 
     const [selected, setSelected] = useState([]);
@@ -31,7 +32,7 @@ function Projects() {
         { 
             id: 1, 
             title: 'Health Planner Pro', 
-            image: './src/assets/habit.png', 
+            image: {health}, 
             date: 'Jan 2024 - October 2024',  
             skills: ['React.js', 'Python','Supabase'], 
             descr: 'This project demonstrates advanced development techniques using frameworks and programming languages listed. The application enables users to interact with real-time data and provides a detailed interface.', 
