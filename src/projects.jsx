@@ -5,6 +5,10 @@ import catWorking from './assets/catworking.gif';
 import { NavBar } from './App.jsx'; 
 import Footer from './footer.jsx';
 import health from './assets/habit.png'
+import crypto from './assets/crypto_new.png'
+import clueless from './assets/clueless.png'
+import enurse from './assets/enurse.png'
+import spotify from './assets/spotify.png'
 
 function Projects() { 
     const [selected, setSelected] = useState([]);
@@ -41,7 +45,7 @@ function Projects() {
         { 
             id: 2, 
             title: 'CryptoHustle', 
-            image: './src/assets/crypto_new.png', 
+            image: {crypto}, 
             date: 'Jan 2024 - May 2024',   
             skills: ['React.js', 'APIdev','Javascript'], 
             descr: 'This project involves designing a complex database system modeled after a real-world application. The system handles extensive data and user interactions efficiently.', 
@@ -50,7 +54,7 @@ function Projects() {
         { 
             id: 3, 
             title: 'AI Virtual Tryon Generator', 
-            image: './src/assets/clueless.png', 
+            image: {clueless}, 
             date: 'August 2024 - December 2024',   
             skills: ['Typescript','Python','Google Gemini','Hugging Face'], 
             descr: 'Track the weather using reading and creating APIs', 
@@ -59,7 +63,7 @@ function Projects() {
         { 
             id: 5, 
             title: 'eNurse Java Application', 
-            image: './src/assets/enurse.png', 
+            image: {enurse}, 
             date: 'May 2022 - December 2022',   
             skills: ['Python', 'React.js'], 
             descr: 'This project focuses on building a robust application using object-oriented programming to enhance operational efficiency in healthcare settings.', 
@@ -68,7 +72,7 @@ function Projects() {
         { 
             id: 6, 
             title: 'UX Spotify Redesign', 
-            image: './src/assets/spotify.png', 
+            image: {spotify}, 
             date: 'May 2022 - December 2022',   
             skills: ['Python', 'React.js'], 
             descr: 'This project explores UX/UI design principles to create an intuitive and responsive dashboard for weather monitoring.', 
