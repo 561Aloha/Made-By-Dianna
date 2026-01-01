@@ -60,9 +60,9 @@
     object-fit: cover;
     border-radius: 12px;
     margin-top: 8px;
-
     border: 1px solid white;
   }
+  
 .menu-items {
     display: flex;
     align-items: center;
@@ -70,13 +70,12 @@
     border-radius: 12px;
     max-height: 48px;
     border: 1px solid white;
+    gap: 4px;
+    z-index: 4;
+    justify-content: space-between;
   }
   
-.menu-items a:hover {
-    background-color: #2a2a2a;
-    color: white;
-    text-decoration: none;
-  }  
+
 .menu-items a{
     font-size: 16px;
     margin-left: 12px;
@@ -89,7 +88,13 @@
 .menu-items a:first-child{
     margin-left: 0;
   }
-
+.menu-items a:hover {
+    padding:11px;
+    background-color: #2a2a2a;
+    text-decoration: none;
+    z-index: 3;
+    border: 1px solid rgb(255, 255, 255);
+  }  
 .navbar {
   display: flex;
   justify-content: space-between;

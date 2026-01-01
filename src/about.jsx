@@ -10,12 +10,22 @@ const HeroSection = () => (
   <section className="hero-section">
     <div className="hero-text">
       <h1>Hi I'm Dianna <span role="img" aria-label="waving hand">👋</span></h1>
-      <h2>I'm a Junior Software Developer</h2>
+      <h3>Designing in Figma, building in VS Studio</h3>
       <p>
-        I'm a recent as a computer science graduateat Florida Atlantic University
-        and sharing my knowledge in software development. In my free time,
-        I'm learning about UX/UI to become a better programmer and creating
-        3D models that can be used in the metaverse!
+        I'm someone who enjoys the entire process of creating digital products, from the initial design phase to the final development stage. I love bringing ideas to life through both design and code.
+      <br/>
+      <br></br>
+      I've always had a entrepenueral mindset and enjoy the process of creating something from nothing.
+      Out of highschool, I started a small business designing and selling custom swimwear.
+      I needed to have several skills. Marketing, Production, Design, Customer Support,
+      and execution.
+      <br/>
+      <br></br>
+      <p>Since that experience 10 years ago, I've learned that I really enjoy the design and development process.
+        I've since then studied UX and UI design, worked at the #1 beauty company in the USA, completed my BA in computer science,
+        and have worked on several personal and freelance projects related to the software engineering space.
+      </p>
+      I'm currently looking for new opportunities to apply my skills and continue growing as a designer and developer.
       </p>
       <div className="social-icons">
           <img src={instagram}></img>

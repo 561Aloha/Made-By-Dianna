@@ -2,11 +2,11 @@
 .hero-section {
   display: flex;
   margin: 0 auto;
-  margin-top: -102px;
+  margin-top: -60px;
   align-items: center;
   width: 90%;
   padding: 3rem;
-  max-width: 1200px; /* Add max-width instead of min-width */
+  max-width: 1200px; 
 }
 
 .hero-text {
