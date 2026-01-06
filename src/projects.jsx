@@ -6,7 +6,6 @@ import catWorking from "./assets/catworking.gif";
 import { NavBar } from "./App.jsx";
 import Footer from "./footer.jsx";
 
-import enurse from "./assets/enurse.png";
 import health from "./assets/habit.png";
 import crypto from "./assets/crypto_new.png";
 import clueless from "./assets/clueless.png";

@@ -35,7 +35,6 @@ const HeroSection = () => (
           <a href="/resume.pdf" download="Dianna-Dimambro-Resume.pdf">
             <button type="button">Download Resume</button>
           </a>
-
       </div>
     </div>
 
