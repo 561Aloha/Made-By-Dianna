@@ -9,7 +9,7 @@ import Footer from "./footer.jsx";
 import health from "./assets/habit.png";
 import crypto from "./assets/crypto_new.png";
 import clueless from "./assets/clueless.png";
-import enurse from "./assets/enurse.png";
+import enurse from "./assets/eNurse.png";
 import spotify from "./assets/spotify.png";
 
 function Projects() {
