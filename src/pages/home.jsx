@@ -1,12 +1,11 @@
-import Intro from './intro';
-import Featured from './featured';
-import Tech from './tech';;
-import Footer from './footer';
+import Intro from '../intro';
+import Featured from '../featured';
+import Tech from '../tech';;
+import Footer from '../footer';
 import React, { useEffect, useRef } from "react";
-import './css/intro.css';
-import ScrollingCarousel from './ScrollingCarousel';
-import UxHome from './components/uxdesign/projectitems';
-import MainChat from './components/AI ChatBot/main_chat';
+import '../css/intro.css';
+import UxHome from '../components/uxdesign/projectitems';
+import MainChat from '../components/AI ChatBot/main_chat';
 
 function Home() {
     const featuredRef = useRef(null);

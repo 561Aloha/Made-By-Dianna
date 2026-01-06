@@ -1,16 +1,16 @@
 // ScrollingCarousel.jsx
 import React from 'react';
 import './ScrollingCarousel.css'; // Add styles here or inline
-import premier from "/src/techstack/premierepro-original.svg";
-import java from '/src/techstack/java-original-wordmark.svg';
-import reactjs from '/src/techstack/react-original-wordmark.svg' ;
-import python from "/src/techstack/python-original-wordmark.svg";
-import jira from "/src/techstack/jira-original-wordmark.svg";
-import mySQL from "/src/techstack/mysql-original-wordmark.svg";
-import mongodb from "/src/techstack/mongodb-plain-wordmark.svg";
-import javascript from "/src/techstack/javascript-original.svg";
-import visualstudio from "/src/techstack/vscode-original.svg";
-import blender from "/src/techstack/blender-original.svg";
+import premier from "/src/assets/techstack/premierepro-original.svg";
+import java from '/src/assets/techstack/java-original-wordmark.svg';
+import reactjs from '/src/assets/techstack/react-original-wordmark.svg' ;
+import python from "/src/assets/techstack/python-original-wordmark.svg";
+import jira from "/src/assets/techstack/jira-original-wordmark.svg";
+import mySQL from "/src/assets/techstack/mysql-original-wordmark.svg";
+import mongodb from "/src/assets/techstack/mongodb-plain-wordmark.svg";
+import javascript from "/src/assets/techstack/javascript-original.svg";
+import visualstudio from "/src/assets/techstack/vscode-original.svg";
+import blender from "/src/assets/techstack/blender-original.svg";
 
 
 const logos = [

@@ -3,13 +3,14 @@ import React, { useState, useEffect} from "react";
 
 import './App.css';
 import './css/navbar.css';
-import Home from './home';
+import Home from './pages/home.jsx';
 import Contact from './contact';
 import UXDesign from './uxdesign';
 import logo from './assets/logo-d.png';
 import CustomCursor from './customcusor';
 import Projects from './projects';
-import AboutMe from './about';
+import AboutMe from './pages/about.jsx';
+import Resume from './pages/resume.jsx';
 
 export function NavBar() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -54,6 +55,7 @@ function App() {
       { path: "/contact", element: <Contact /> },
       { path: "/naturesway", element: <UXDesign /> },
       { path: "/about", element: <AboutMe /> },
+      { path: "/resume", element: <Resume /> },
     ]);
 
   return (

@@ -1,10 +1,11 @@
 import React from 'react';
-import './css/aboutme.css';
-import instagram from "./assets/instagram-b.png"
-import linkedin from "./assets/linkedin-b.png"
-import github from "./assets/github-b.png"
-import me from "./assets/me.jpeg";
-import { NavBar } from './App';
+import '../css/aboutme.css';
+import instagram from "../assets/instagram-b.png"
+import linkedin from "../assets/linkedin-b.png"
+import github from "../assets/github-b.png"
+import me from "../assets/me.jpeg";
+import { NavBar } from '../App';
+import Resume from './resume';
 
 const HeroSection = () => (
   <section className="hero-section">
@@ -31,8 +32,13 @@ const HeroSection = () => (
           <img src={instagram}></img>
           <img src={linkedin}></img>
           <img src={github}></img>
+          <a href="/resume.pdf" download="Dianna-Dimambro-Resume.pdf">
+            <button type="button">Download Resume</button>
+          </a>
+
       </div>
     </div>
+
     <div className="hero-image">
       <img src={me} alt="Dianna" />
     </div>
