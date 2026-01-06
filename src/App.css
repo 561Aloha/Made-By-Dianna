@@ -185,6 +185,7 @@ footer hr {
   gap: 16px;
   align-items: center;
   filter: invert(90%);
+  pointer-events: auto;
 }
 
 .social img {
