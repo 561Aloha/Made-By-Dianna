@@ -65,16 +65,7 @@ function Projects() {
       descr: "AI-powered virtual try-on fashion editor using modern ML tooling.",
       link: "https://github.com/561Aloha/AI-Fashion-Editor",
     },
-    {
-      id: 5,
-      title: "eNurse Java Application",
-      image: enurse, // ✅ fixed
-      date: "May 2022 - December 2022",
-      skills: ["Python", "React.js"],
-      descr:
-        "A robust healthcare-focused application using object-oriented programming patterns to support nurse management workflows.",
-      link: "https://github.com/561Aloha/Nurse-Management",
-    },
+
     {
       id: 6,
       title: "UX Spotify Redesign",
