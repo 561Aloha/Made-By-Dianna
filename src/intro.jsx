@@ -99,9 +99,7 @@ function Intro({featuredRef}) {
                 <h4 className={`fade-up ${showWelcome ? 'show' : ''}`}>Welcome to</h4>
                 <h2 className={`fade-up ${showMadeBy ? 'show' : ''}`}>Made by Dianna</h2>
                 <p className={`fade-up ${showMadeBy ? 'show' : ''}`}>
-                    I'm a computer science graduate with experience in building
-                    beautiful, user-friendly websites.
-                </p>
+                  A frontend engineer using UX design principles to build clean, human-centered digital experiences.                </p>
                 <div className={`button-grp fade-up ${showButtons ? 'show' : ''}`}>
                     <Link to='/about'><button>About Me</button></Link>
                 </div>
