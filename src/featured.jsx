@@ -3,7 +3,7 @@ import "./css/featured.css";
 import { Link } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
 import projVideo from "./assets/expand.mp4";
-import cryptoVid from "./assets/crypto.mp4";
+import flowerVid from "./assets/flower.mp4";
 
 function Featured() {
   const { ref: rowRef, inView: rowInView } = useInView({
@@ -100,7 +100,7 @@ function Featured() {
           <div className="img-proj" ref={video2InViewRef}>
             <video
               ref={video2Ref}
-              src={cryptoVid}
+              src={flowerVid}
               preload="auto"
               loop
               muted
@@ -110,19 +110,33 @@ function Featured() {
             />
           </div>
           <div className={`leftProj ${rowInView ? "fade-in" : ""}`}>
-            <h4>Crypto Hustle</h4>
+            <h4>Bloom Notes</h4>
             <h5>
-              Crypto Hustle is a smart cryptocurrency web app designed for
-              tracking your favorite coins and managing your portfolio with
-              real-time updates.
+              Bloom notes is a modern flower bouquet generator,  designed for capturing messages to 
+              send to others in a playful way. This is made with Typescript + React
             </h5>
-            <div className="button-group" style={{opacity: showButtons ? 1 : 0, transition: "opacity 0.5s ease-in-out" }}>
-            <a href="https://crypto-valley.netlify.app" target="_blank" rel="noopener noreferrer">
-              <button>View Project</button>
-            </a>
-            <a href="https://github.com/561Aloha/CryptoHustle" target="_blank" rel="noopener noreferrer">
-              <button>View Github</button>
-            </a>
+            <div
+              className="button-group"
+              style={{
+                opacity: showButtons ? 1 : 0,
+                transition: "opacity 0.5s ease-in-out",
+              }}
+            >
+              <a
+                href="https://bloomnotes.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button>Visit Project</button>
+              </a>
+
+              <a
+                href="https://github.com/561Aloha/bloomnotes"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button>Visit Github</button>
+              </a>
             </div>
           </div>
         </div>

@@ -6,6 +6,9 @@ import catWorking from "./assets/catworking.gif";
 import { NavBar } from "./App.jsx";
 import Footer from "./footer.jsx";
 
+import flower from "./assets/Bloom.png";
+
+import Armada from "./assets/Armada.png";
 import health from "./assets/habit.png";
 import crypto from "./assets/crypto_new.png";
 import clueless from "./assets/clueless.png";
@@ -27,6 +30,7 @@ function Projects() {
     { id: "React.js", title: "React.js" },
     { id: "Python", title: "Python" },
     { id: "Javascript", title: "Javascript" },
+    { id: "Typescript", title: "TypeScript" },
     { id: "Java", title: "Java" },
     { id: "Blender", title: "Blender" },
     { id: "mySQL", title: "SQL" },
@@ -37,8 +41,38 @@ function Projects() {
   const projects = [
     {
       id: 1,
+      title: "Bloom Notes",
+      image: flower,
+      date: "Jan 2026 - Feb 2026",
+      skills: ["React.js", "Typescript", "Supabase"],
+      descr:
+      "A fun typescript project that offers a playful way to send virtual flower bouquets through a scalable architecture.",
+      link: "bloomnotes.vercel.app",
+    },
+    {
+      id: 2,
+      title: "Armada Pros",
+      image: Armada,
+      date: "Jan 2025 - June 2025",
+      skills: ["React", "Javascript", "CSS"],
+      descr:
+      "Designed and Built by us, this client was looking for a brochure-like website for his property management services",
+      link: "ArmadaPros.com",
+    },
+    {
+      id: 3,
+      title: "AI Virtual Tryon Generator",
+      image: clueless,
+      date: "August 2025 - December 2025",
+      skills: ["Typescript", "Python", "Google Gemini", "Hugging Face"],
+      descr: "AI-powered virtual try-on fashion editor using modern ML tooling.",
+      link: "https://github.com/561Aloha/AI-Fashion-Editor",
+    },
+
+    {
+      id: 4,
       title: "Health Planner Pro",
-      image: health, // ✅ fixed (no braces)
+      image: health,
       date: "Jan 2024 - October 2024",
       skills: ["React.js", "Python", "Supabase"],
       descr:
@@ -46,29 +80,20 @@ function Projects() {
       link: "https://github.com/561Aloha/Habit-Tracker",
     },
     {
-      id: 2,
+      id: 5,
       title: "CryptoHustle",
-      image: crypto, // ✅ fixed
+      image: crypto, 
       date: "Jan 2024 - May 2024",
       skills: ["React.js", "APIdev", "Javascript"],
       descr:
         "This project involves designing a complex database system modeled after a real-world application. The system handles extensive data and user interactions efficiently.",
       link: "https://www.cryptocapitol.netlify.app",
     },
-    {
-      id: 3,
-      title: "AI Virtual Tryon Generator",
-      image: clueless, // ✅ fixed
-      date: "August 2024 - December 2024",
-      skills: ["Typescript", "Python", "Google Gemini", "Hugging Face"],
-      descr: "AI-powered virtual try-on fashion editor using modern ML tooling.",
-      link: "https://github.com/561Aloha/AI-Fashion-Editor",
-    },
 
     {
       id: 6,
       title: "UX Spotify Redesign",
-      image: spotify, // ✅ fixed
+      image: spotify, 
       date: "May 2022 - December 2022",
       skills: ["Python", "React.js"],
       descr:
