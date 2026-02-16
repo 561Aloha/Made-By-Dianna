@@ -17,7 +17,8 @@
   width: 100%;
 }
 .button-secondary{
-  border: 2px solid #fff;
+  
+  border: 1px solid #fff;
 }
 .services_image-wrapper {
   position: sticky;
