@@ -7,7 +7,6 @@ import Home from './pages/home.jsx';
 import Contact from './contact';
 import UXDesign from './uxdesign';
 import logo from './assets/logo-d.png';
-import CustomCursor from './customcusor';
 import Projects from './projects';
 import AboutMe from './pages/about.jsx';
 import Resume from './pages/resume.jsx';

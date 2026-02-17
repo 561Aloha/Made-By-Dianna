@@ -1,27 +1,3 @@
-/* =========================
-   GLOBAL RESET / ROOT
-========================= */
-
-* {
-  box-sizing: border-box;
-}
-
-html, body {
-  margin: 0;
-  padding: 0;
-}
-
-#root {
-  width: 100vw;
-  min-height: 100vh;
-  background-color: rgb(36, 36, 36);
-  color: white;
-  text-align: center;
-}
-
-/* =========================
-   INTRO / HERO
-========================= */
 
 .intro {
   position: relative;
@@ -57,10 +33,6 @@ html, body {
   margin-top: 12px;
 }
 
-/* =========================
-   FADE ANIMATIONS
-========================= */
-
 .fade-up {
   opacity: 0;
   transform: translateY(30px);
@@ -71,10 +43,6 @@ html, body {
   opacity: 1;
   transform: translateY(0);
 }
-
-/* =========================
-   BUTTONS
-========================= */
 
 .button-grp {
   margin-top: 32px;
@@ -92,10 +60,6 @@ html, body {
 .button-grp a {
   pointer-events: auto;
 }
-
-/* =========================
-   FLUID CANVAS / BACKGROUND
-========================= */
 
 .fluid-canvas,
 .home-fluid-canvas {
@@ -120,30 +84,6 @@ html, body {
   background-position: center;
   background-repeat: no-repeat;
   pointer-events: none;
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-  width: 100%;
-  padding: 48px 0;
-  text-align: left;
-}
-
-.footer-solid {
-  background-color: rgb(4, 5, 5);
-}
-
-.footer-transparent {
-  background-color: transparent;
-}
-
-footer hr {
-  border: none;
-  border-top: 1px solid #444;
-  margin-bottom: 32px;
 }
 
 .together {
@@ -175,10 +115,6 @@ footer hr {
   justify-content: flex-end;
   align-items: flex-start;
 }
-
-/* =========================
-   SOCIAL ICONS
-========================= */
 
 .social {
   display: flex;
@@ -223,12 +159,7 @@ footer hr {
   color: #000;
 }
 
-/* =========================
-   MOBILE STYLES
-========================= */
-
 @media (max-width: 768px) {
-
   .main-head {
     width: 100%;
     padding: 16px;
@@ -273,13 +204,4 @@ footer hr {
   .tech-grid {
     width: 90%;
   }
-}
-
-/* =========================
-   ANIMATIONS
-========================= */
-
-@keyframes fadeHint {
-  from { opacity: 0.3; }
-  to { opacity: 1; }
 }

@@ -13,6 +13,19 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: rgb(36, 36, 36);
+  color: white;
+  text-align: center;
+}
+
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -21,12 +34,16 @@ a {
 a:hover {
   color: #535bf2;
 }
-
+html{
+  margin: 0;
+  padding: 0;
+}
 body {
   margin: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
+  padding: 0;
   min-height: 100vh;
 }
 
@@ -42,6 +59,8 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
+
+  pointer-events: auto;
   background-color:transparent;
   cursor: pointer;
   transition: border-color 0.25s;
@@ -77,6 +96,30 @@ canvas, .app-container{
 .app-container{
   overflow-x: hidden;
   overflow-y: auto; }
-button {
-  pointer-events: auto;
+
+
+footer {
+  width: 100%;
+  padding: 48px 0;
+  text-align: left;
+}
+
+.footer-solid {
+  background-color: rgb(4, 5, 5);
+}
+
+.footer-transparent {
+  background-color: transparent;
+}
+
+footer hr {
+  border: none;
+  border-top: 1px solid #444;
+  margin-bottom: 32px;
+}
+
+
+@keyframes fadeHint {
+  from { opacity: 0.3; }
+  to { opacity: 1; }
 }

@@ -47,7 +47,7 @@ function Projects() {
       skills: ["React.js", "Typescript", "Supabase"],
       descr:
       "A fun typescript project that offers a playful way to send virtual flower bouquets through a scalable architecture.",
-      link: "bloomnotes.vercel.app",
+      link: "https://bloomnotes.vercel.app",
     },
     {
       id: 2,
@@ -57,7 +57,7 @@ function Projects() {
       skills: ["React", "Javascript", "CSS"],
       descr:
       "Designed and Built by us, this client was looking for a brochure-like website for his property management services",
-      link: "ArmadaPros.com",
+      link: "https://ArmadaPros.com",
     },
     {
       id: 3,
@@ -219,7 +219,8 @@ function Projects() {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="project-link"
-                      >
+                      > 
+                      
                         View Project
                         <img src={arrow} alt="External link" className="link-icon" />
                       </a>
