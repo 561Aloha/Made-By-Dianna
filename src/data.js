@@ -1,4 +1,4 @@
-import bloom  from './assets/bloom.png'
+import bloom  from './assets/Bloom.png'
 import image3 from './assets/3.png'
 import clueless  from './assets/clueless.png'
 import clueless1  from './assets/clueless_1.png'
