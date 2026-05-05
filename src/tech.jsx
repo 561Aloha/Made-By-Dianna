@@ -1,119 +1,74 @@
 import React from "react";
-import './App.css';
+import "./App.css";
 import ScrollingCarousel from "./ScrollingCarousel";
 
-function tech() {
-    const techstack = [
-        "ReactJS",
-        "Python",
-        "Java",
-        "JavaScript",
-        "HTML",
-        "CSS",
-        "MongoDB",
-        "MySQL",
-        "Microsoft Azure",
-        "Adobe Illustrator",
-        "Adobe Photoshop",
-        "Adobe Premier Pro",
-        "Figma",
-        "Supabase",
-        "Ski-Learn",
-        "OpenCV",
-        "Django",
-      ];
-      
-    const data = [
-      { id: 'Programming', title: 'Python' },
-      { id: 'Programming', title: 'Java' },
-      { id: 'Programming', title: 'Javascript' },
-      { id: 'Programming', title: 'HTML' },
-      { id: 'Programming', title: 'CSS' },
-      { id: 'Framework', title: 'React.js' },
-      { id: 'Framework', title: 'Django' },
-      { id: 'Framework', title: 'SkiLearn' },
-      { id: 'Framework', title: 'OpenCV' },
-      { id: 'Software', title: 'Blender' },
-      { id: 'Software', title: 'Figma' },
-      { id: 'Software', title: 'Adobe Illustrator' },
-      { id: 'Software', title: 'Adobe Photoshop' },
-      { id: 'Database', title: 'mySQL' },
-      { id: 'Database', title: 'Supabase' },
-      { id: 'Database', title: 'MongoDB' },
+function Tech() {
+  const skills = {
+    Frontend: [
+      "TypeScript",
+      "React.js",
+      "Next.js",
+      "Tailwind CSS",
+      "Motion",
+      "React Three Fiber",
+      "JavaScript",
+      "HTML",
+      "CSS",
+    ],
+    Backend: [
+      "Node.js",
+      "Python",
+      "Java",
+      "FastAPI",
+      "Django",
+      "SQL",
+      "MySQL",
+      "MongoDB",
+      "Supabase",
+    ],
+    Tools: [
+      "Git",
+      "VS Code",
+      "Cursor",
+      "Figma",
+      "Blender",
+      "Azure",
+      "Adobe Illustrator",
+      "Adobe Photoshop",
+      "Adobe Premiere Pro",
+    ],
+  };
 
+  return (
+    <section className="tech">
+      <div className="tech-header">
+        <div className="tech-carousel-wrap">
+          <h2> My tech stack</h2>
+        <ScrollingCarousel />
+      </div>
+        
+        <div className="tech-divider" />
+      </div>
 
-    ]
-    return(
-        <>
-        <div className="tech">
-        <h4> I constantly try to improve</h4>
-        <h2>My Tech Stack</h2>
-        <div>
-          
-        <div className="tech-grid">
+      <div className="tech-columns">
+        {Object.entries(skills).map(([category, items]) => (
+          <div className="tech-column" key={category}>
+            <h3>{category}</h3>
 
-        {data.map(skill => (
-          <span key={skill.title} className={`tech-item ${skill.id.toLowerCase()}`}>
-            {skill.title}
-          </span>
+            <div className="tech-pill-group">
+              {items.map((item) => (
+                <span key={item} className="tech-pill">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
         ))}
-
-      </div>   
-      <ScrollingCarousel/>
-      </div>  
       </div>
 
 
-        </>
+    </section>
+  );
+}
 
-    );
-
-};
-
-export default tech;
-
-
-
-// import React from "react";
-// import './App.css';
-// import ScrollingCarousel from "./ScrollingCarousel";
-
-// function tech() {
-//     const techstack = {
-//       "Programming Languages": ["HTML", "CSS", "JavaScript", "Python", "Java"],
-//       "Frameworks/Libraries": ["React", "TensorFlow", "OpenCV", "Scikit-Learn", "MatPlotLib"],
-//       "Databases/Tools": ["Supabase", "MySQL", "MongoDB", "Figma", "Adobe Illustrator", "Adobe Photoshop"]
-//     };
-  
-      
-//     return(
-//         <>
-//         <div className="tech">
-//         <h4> I constantly try to improve</h4>
-//         <h2>My Tech Stack</h2>
-//         <div>
-//         <div className="tech-grid">
-//         {Object.entries(techstack).map(([category, tools], index) => (
-//           <div className="tech-item" key={index}>
-//             <h4>{category}</h4>
-//             <ul>
-//               {tools.map((tool, i) => (
-//                 <li key={i}>{tool}</li>
-//               ))}
-//             </ul>
-//           </div>
-//         ))}
-//       </div>   
-//       <ScrollingCarousel/>
-//       </div>  
-//       </div>
-
-
-//         </>
-
-//     );
-
-// };
-
-// export default tech;
-
+export default Tech;

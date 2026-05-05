@@ -13,6 +13,20 @@
   height: 48vh;
 }
 
+.featured-section-h2{
+  text-align: left;
+  width: 50%;
+  padding: 48px 0 0 48px;
+  gap:0;
+  margin:0;
+}
+.featured-section-p{
+  text-align: left;
+  width: 50%;
+
+  margin:0;
+  padding: 8px 0 32px 48px;
+}
 .main-head h2 {
   font-size: 48px;
 }
@@ -115,7 +129,9 @@
   color: white;
   pointer-events: none;
 }
-
+.intro-section{
+  height: 100vh;
+}
 @media (max-width: 768px) {
   #intro {
       position: relative;
@@ -253,4 +269,43 @@
   .navbar{
       margin-left: 12px;
   }
+}
+
+
+.featured-section {
+
+  background: rgba(39, 38, 41, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+
+}
+.availability-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.3);
+  font-size: 13px;
+  color: #ddd;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(6px);
+  margin-top: 16px;
+}
+
+.availability-dot {
+  width: 8px;
+  height: 8px;
+  background: #4cff7a;
+  border-radius: 50%;
+}
+
+.availability-badge{
+  margin:0;
+}
+
+.main-head{
+  max-width: 500px;
+  width: 100%;
 }

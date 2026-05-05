@@ -19,12 +19,10 @@ function Intro({featuredRef}) {
             setIsMobile(nowMobile);
             
             if (nowMobile) {
-                // Check if we're in the intro section
                 const introSection = document.getElementById('intro');
                 const introHeight = introSection?.offsetHeight || window.innerHeight;
                 const currentScroll = window.scrollY;
                 
-                // Only show mobile intro if we're in the top section
                 if (currentScroll < introHeight * 0.8) {
                     setShouldShowMobileIntro(true);
                 } else {
@@ -79,7 +77,6 @@ function Intro({featuredRef}) {
         };
     }, [shouldShowMobileIntro]);
 
-    // Only lock body scroll if we should show mobile intro
     useEffect(() => {
         if (shouldShowMobileIntro) {
             document.body.style.overflow = 'hidden';
@@ -88,7 +85,7 @@ function Intro({featuredRef}) {
         }
       
         return () => {
-            document.body.style.overflow = 'auto'; // restore when unmounted
+            document.body.style.overflow = 'auto'; 
         };
     }, [shouldShowMobileIntro]);
 
@@ -96,12 +93,18 @@ function Intro({featuredRef}) {
         <div id="intro" ref={containerRef} className={`intro ${shouldShowMobileIntro ? 'mobile-intro' : ''}`}>
             <NavBar />
             <div className="main-head" ref={sectionRef}>
-                <h4 className={`fade-up ${showWelcome ? 'show' : ''}`}>Welcome to</h4>
-                <h2 className={`fade-up ${showMadeBy ? 'show' : ''}`}>Made by Dianna</h2>
+                <h2 className={`fade-up ${showWelcome ? 'show' : ''}`}>Hi I'm Dianna. </h2>
                 <p className={`fade-up ${showMadeBy ? 'show' : ''}`}>
-                  A frontend engineer using UX design principles to build clean, human-centered digital experiences.                </p>
-                <div className={`button-grp fade-up ${showButtons ? 'show' : ''}`}>
-                    <Link to='/about'><button>About Me</button></Link>
+                    A software engineer who approaches development with a UX designer’s mindset, <br></br><br></br>
+
+                    I'm passionate about designing experiences that can provide a better use experience and 
+                    building scalable applications that can leave a positive impact on the world.
+ </p>
+    <div className={`button-grp fade-up ${showButtons ? 'show' : ''}`}>
+            <a href="#contact" className="availability-badge">
+            <div className="availability-dot"></div>
+            Available for freelance & full-time
+            </a>
                 </div>
             </div>
             

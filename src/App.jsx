@@ -10,6 +10,7 @@ import logo from './assets/logo-d.png';
 import Projects from './projects';
 import AboutMe from './pages/about.jsx';
 import Resume from './pages/resume.jsx';
+import ProjectPage from './pages/ProjectPage.jsx';
 
 export function NavBar() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -47,18 +48,27 @@ export function Footer() {
     </nav>
   );
 }
-function App() {
-    const element = useRoutes([
-      { path: "/", element: <Home /> },
-      { path: "/projects", element: <Projects /> },
-      { path: "/contact", element: <Contact /> },
-      { path: "/naturesway", element: <UXDesign /> },
-      { path: "/about", element: <AboutMe /> },
-      { path: "/resume", element: <Resume /> },
-    ]);
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
 
+function App() {
+  const element = useRoutes([
+    { path: "/", element: <Home /> },
+    { path: "/projects", element: <Projects /> },
+    { path: "/projects/:id", element: <ProjectPage /> },
+    { path: "/contact", element: <Contact /> },
+    { path: "/naturesway", element: <UXDesign /> },
+    { path: "/about", element: <AboutMe /> },
+    { path: "/resume", element: <Resume /> },
+  ]);
   return (
     <>
+      <ScrollToTop />
       <main>{element}</main>
     </>
   

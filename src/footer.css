@@ -1,0 +1,142 @@
+.footer-scroll-section {
+  position: relative;
+  height: 160vh;
+}
+
+.footer-sticky-shell {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+
+  background: #111;
+  overflow: hidden;
+}
+
+.footer-panel {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  background: #111;
+  color: #ece9e1;
+  display: flex;
+  pointer-events: auto;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 48px 32px 24px;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.footer-panel{
+  background: #111;
+}
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px;
+  align-items: start;
+  width: 95%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.footer-col {
+  font-size: 14px;
+  line-height: 1.45;
+  color: #ece9e1;
+}
+
+.footer-col a {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.footer-col a:hover {
+  opacity: 0.7;
+}
+
+.footer-muted {
+  opacity: 0.6;
+}
+
+.footer-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+.footer-cta-text {
+  position: relative;
+}
+
+.footer-cta-arrow {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.footer-brand-wrap {
+  position: absolute;
+  left: 0;
+  bottom: 12px;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+}
+
+.footer-brand {
+  width: 97%;
+  margin: 0 auto;
+  font-size: clamp(72px, 15vw, 250px);
+  line-height: 0.86;
+  letter-spacing: -0.07em;
+  font-weight: 400;
+  color: #ece9e1;
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .footer-panel {
+    padding: 120px 16px 20px;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 16px;
+    width: 100%;
+  }
+
+  .footer-col {
+    font-size: 13px;
+  }
+
+  .footer-brand {
+    width: 92%;
+    font-size: clamp(52px, 18vw, 110px);
+    line-height: 0.92;
+    white-space: normal;
+    word-break: break-word;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-scroll-section {
+    height: 160vh;
+  }
+  .footer-brand{
+    font-size: clamp(52px, 15vw, 75px);
+  }
+  .footer-top {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-panel {
+    padding: 96px 16px 20px;
+  }
+}
+

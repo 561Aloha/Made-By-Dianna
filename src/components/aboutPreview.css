@@ -1,0 +1,190 @@
+.about-preview-section {
+  width: 100%;
+  padding: 120px 0;
+  min-height: 220vh;
+}
+
+.about-preview-inner {
+  width: 93%;
+  margin: 0 auto;
+  pointer-events: auto;
+  display: grid;
+  grid-template-columns: 1fr 1.50fr;
+  text-align: left;
+  align-items: start;
+  position: sticky;
+  top: 120px;
+}
+
+.about-preview-right {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  height: 80vh;
+  overflow: auto;
+  padding: 24px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  /* For WebKit browsers (Chrome, Safari, Edge) */
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+  /* Standard property (supported in Firefox) */
+  mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+  /* ---------------------- */
+}
+
+.about-preview-right::-webkit-scrollbar {
+  display: none;
+}
+
+.about-preview-kicker {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.experience-row {
+  display: grid;
+  grid-template-columns: 125px 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.experience-date p {
+  margin: 0;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.experience-main h3 {
+  margin: 0 0 12px 0;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 400;
+  max-width: 500px;
+  color: white;
+}
+
+.experience-main h3 span {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.experience-summary {
+  margin: 0 0 18px 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgb(185, 185, 185);
+  max-width: 500px;
+}
+
+.experience-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.experience-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 999px;
+  color: #d8d8d8;
+  font-weight: 400;
+  line-height: 1;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.about-preview-left {
+  position: relative;
+}
+
+.about-preview-image-wrap {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.about-preview-image {
+  max-width: 90%;
+  width: auto;
+  height: 72vh;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 12px;
+}
+
+.about-preview-copy {
+  text-align: left;
+}
+
+.about-preview-mini {
+  margin: 0 0 16px 0;
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgb(205, 205, 205);
+}
+
+.about-preview-btn {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background-color: #d9dbff;
+  color: black;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+@media (max-width: 900px) {
+  .about-preview-section {
+    min-height: auto;
+  }
+
+  .about-preview-inner {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    position: relative;
+    top: 0;
+  }
+
+  .about-preview-right {
+    height: auto;
+    overflow: visible;
+  }
+
+  .experience-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .about-preview-image {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .experience-main h3 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-preview-section {
+    padding: 80px 0;
+  }
+
+  .experience-summary,
+  .about-preview-mini {
+    font-size: 14px;
+  }
+
+  .experience-tag {
+    min-height: 38px;
+    padding: 0 14px;
+    font-size: 14px;
+  }
+}
+
+

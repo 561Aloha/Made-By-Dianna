@@ -1,0 +1,204 @@
+/* ── Scroll-lock section ── */
+.new-scroll-section {
+  /* Tall enough to give scroll budget: 100vh per card + initial lock */
+  height: 600vh;
+  position: relative;
+}
+
+.new-sticky-shell {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.new-sticky-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 48px;
+  padding-top: 0;
+}
+
+/* Thin progress bar across the top */
+.new-progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #d9dbff;
+  z-index: 10;
+}
+
+
+/* The sliding strip */
+.new-cards-strip {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  align-items: center;
+  will-change: transform;
+}
+
+/* Scroll hint */
+.new-scroll-hint {
+  position: absolute;
+  bottom: 40px;
+  left: 7vw;
+  font-size: 13px;
+  color: rgb(150, 150, 150);
+  letter-spacing: 0.05em;
+  pointer-events: none;
+}
+
+/* ── Card ── */
+.new-project-card {
+  flex: 0 0 520px;
+  display: flex;
+  flex-direction: column;
+  width: 520px;
+}
+
+.new-project-card:last-child{
+  gap:0;
+}
+
+.new-project-image-wrap {
+  width: 100%;
+  height: 45vh;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.new-project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transform: scale(1.05);
+  transition: transform 0.6s ease;
+}
+
+.new-project-card:hover .new-project-image {
+  transform: scale(1.08);
+}
+
+.new-project-content {
+  color: white;
+  text-align: left;
+  padding-top: 16px;
+  max-width: 500px;
+}
+
+.new-project-content h2 {
+  font-size: 28px;
+  margin: 0 0 8px 0;
+}
+
+.new-project-content p {
+  font-size: 15px;
+  line-height: 1.5;
+  color: rgb(205, 205, 205);
+  margin: 0;
+}
+
+.new-project-label {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgb(160, 160, 160) !important;
+  margin-bottom: 6px !important;
+}
+
+.new-project-links {
+  margin-top: 16px;
+  pointer-events: auto;
+  display: flex;
+  gap: 12px;
+}
+
+.project-btn {
+  padding: 8px 14px;
+  color: black;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #d9dbff;
+  transition: background 0.2s ease;
+}
+
+.new-section-header, .featured-section-p , .featured-section-h2 {
+  padding: 0;
+  margin:0;
+
+}
+.featured-section-p{
+  padding-bottom: 24px;
+}
+.project-btn:hover {
+  background-color: #bfc2ff;
+}
+
+.project-btn.outline {
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.project-btn.outline:hover {
+  border-color: rgba(255,255,255,0.7);
+}
+
+/* ── Mobile: revert to vertical grid ── */
+@media (max-width: 768px) {
+  .new-scroll-section {
+    height: auto;
+  }
+
+  .new-sticky-shell {
+    position: relative;
+    height: auto;
+    overflow: visible;
+    padding: 60px 0 80px;
+  }
+
+  .new-sticky-inner {
+    display: block;
+    height: auto;
+  }
+
+  .new-progress-bar,
+  .new-scroll-hint {
+    display: none;
+  }
+
+  .new-cards-viewport {
+    overflow: visible;
+    height: auto;
+    display: block;
+    padding:0;
+  }
+
+  .new-cards-strip {
+    flex-direction: column;
+    transform: none !important;
+    gap: 60px;
+  }
+
+  .new-project-card {
+    flex: none;
+    width: 100%;
+  }
+
+  .new-project-image-wrap {
+    height: 45vh;
+  }
+}
+

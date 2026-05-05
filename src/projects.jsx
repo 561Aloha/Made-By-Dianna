@@ -1,242 +1,113 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import "./css/projects.css";
-
-import arrow from "./assets/link-external.png";
-import catWorking from "./assets/catworking.gif";
+import { Link } from "react-router-dom";
 import { NavBar } from "./App.jsx";
 import Footer from "./footer.jsx";
+import { projects_1 } from "./data.js";
+import "./css/projects.css";
 
-import flower from "./assets/Bloom.png";
+const SKILLS = [
+  "React.js", "Python", "Javascript", "Typescript",
+  "Java", "Blender", "mySQL", "APIdev", "Supabase",
+];
 
-import Armada from "./assets/Armada.png";
-import health from "./assets/habit.png";
-import crypto from "./assets/crypto_new.png";
-import clueless from "./assets/clueless.png";
-import spotify from "./assets/spotify.png";
+function ProjectCard({ project, index }) {
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { el.classList.add("in-view"); observer.unobserve(el); } },
+      { threshold: 0.12 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <article
+      className="proj-card fade-on-scroll"
+      ref={ref}
+      style={{ transitionDelay: `${(index % 2) * 80}ms` }}
+    >
+      <div className="proj-card-image-wrap">
+        <img src={project.coverImage} alt={project.title} className="proj-card-image" />
+      </div>
+
+      <div className="proj-card-body">
+        {project.skills?.length > 0 && (
+          <p className="proj-card-label">{project.skills.join(" • ")}</p>
+        )}
+        <h2 className="proj-card-title">{project.title}</h2>
+        {project.summary && <p className="proj-card-summary">{project.summary}</p>}
+
+        <div className="proj-card-links">
+          <Link to={`/projects/${project.id}`} className="project-btn">
+            View Case Study
+          </Link>
+          {project.link_web && (
+            <a
+              href={project.link_web}
+              className="project-btn outline"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Visit Website
+            </a>
+          )}
+        </div>
+      </div>
+    </article>
+  );
+}
 
 function Projects() {
   const [selected, setSelected] = useState([]);
-  const [filtersOpen, setFiltersOpen] = useState(false);
 
-  const toggleOption = (id) => {
-    setSelected((prev) =>
-      prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]
-    );
-  };
+  const toggle = (id) =>
+    setSelected((prev) => prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]);
 
-  const clearFilters = () => setSelected([]);
-
-  const data = [
-    { id: "React.js", title: "React.js" },
-    { id: "Python", title: "Python" },
-    { id: "Javascript", title: "Javascript" },
-    { id: "Typescript", title: "TypeScript" },
-    { id: "Java", title: "Java" },
-    { id: "Blender", title: "Blender" },
-    { id: "mySQL", title: "SQL" },
-    { id: "APIdev", title: "API Development" },
-    { id: "Supabase", title: "Supabase/Postgres" },
-  ];
-
-  const projects = [
-    {
-      id: 1,
-      title: "Bloom Notes",
-      image: flower,
-      date: "Jan 2026 - Feb 2026",
-      skills: ["React.js", "Typescript", "Supabase"],
-      descr:
-      "A fun typescript project that offers a playful way to send virtual flower bouquets through a scalable architecture.",
-      link: "https://bloomnotes.vercel.app",
-    },
-    {
-      id: 2,
-      title: "Armada Pros",
-      image: Armada,
-      date: "Jan 2025 - June 2025",
-      skills: ["React", "Javascript", "CSS"],
-      descr:
-      "Designed and Built by us, this client was looking for a brochure-like website for his property management services",
-      link: "https://ArmadaPros.com",
-    },
-    {
-      id: 3,
-      title: "AI Virtual Tryon Generator",
-      image: clueless,
-      date: "August 2025 - December 2025",
-      skills: ["Typescript", "Python", "Google Gemini", "Hugging Face"],
-      descr: "AI-powered virtual try-on fashion editor using modern ML tooling.",
-      link: "https://github.com/561Aloha/AI-Fashion-Editor",
-    },
-
-    {
-      id: 4,
-      title: "Health Planner Pro",
-      image: health,
-      date: "Jan 2024 - October 2024",
-      skills: ["React.js", "Python", "Supabase"],
-      descr:
-        "This project demonstrates advanced development techniques using frameworks and programming languages listed. The application enables users to interact with real-time data and provides a detailed interface.",
-      link: "https://github.com/561Aloha/Habit-Tracker",
-    },
-    {
-      id: 5,
-      title: "CryptoHustle",
-      image: crypto, 
-      date: "Jan 2024 - May 2024",
-      skills: ["React.js", "APIdev", "Javascript"],
-      descr:
-        "This project involves designing a complex database system modeled after a real-world application. The system handles extensive data and user interactions efficiently.",
-      link: "https://www.cryptocapitol.netlify.app",
-    },
-
-    {
-      id: 6,
-      title: "UX Spotify Redesign",
-      image: spotify, 
-      date: "May 2022 - December 2022",
-      skills: ["Python", "React.js"],
-      descr:
-        "A UX/UI redesign concept focusing on clarity, hierarchy, and a more intuitive listening flow.",
-      link: "https://www.figma.com/slides/Bzbavt4OouWH6zYyLjbPau/Spotify?node-id=57-262&t=RrcjPL4N6in9xDfk-0",
-    },
-  ];
-
-  const filteredProjects = useMemo(() => {
-    return selected.length
-      ? projects.filter((p) => selected.some((skill) => p.skills.includes(skill)))
-      : projects;
-  }, [selected]);
-
-  // ----- Fade in on scroll -----
-  const cardsRef = useRef([]);
-
-  useEffect(() => {
-    const els = cardsRef.current.filter(Boolean);
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("in-view");
-            observer.unobserve(entry.target); // animate once
-          }
-        });
-      },
-      { threshold: 0.15 }
-    );
-
-    els.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, [filteredProjects.length]);
+  const filtered = useMemo(() =>
+    selected.length
+      ? projects_1.filter((p) => selected.some((s) => p.skills?.includes(s)))
+      : projects_1,
+    [selected]
+  );
 
   return (
-    <div>
+    <div className="projects-page">
       <NavBar />
 
-      <div className="entire-page">
+      <div className="projects-page-inner">
         {/* Header */}
-        <div className="projects-header">
-          <div className="header-content">
-            <h3>Featured Projects</h3>
+        <header className="projects-page-header">
+          <h1>All Projects</h1>
+          <p>A full archive of work — select a filter to narrow by technology.</p>
+        </header>
 
-            {/* Collapsible filter trigger */}
-            <div style={{ marginTop: "4px", display: "flex", flexWrap: "wrap" }}>
-              <button
-                className="multi-select-button"
-                onClick={() => setFiltersOpen((v) => !v)}
-                aria-expanded={filtersOpen}
-              >
-                Filter by tech stack {filtersOpen ? "▲" : "▼"}
-              </button>
-
-              {selected.length > 0 && (
-                <button className="multi-select-button selected" onClick={clearFilters}>
-                  Clear ({selected.length})
-                </button>
-              )}
-            </div>
-          </div>
+        {/* Filters */}
+        <div className="projects-filters">
+          {SKILLS.map((skill) => (
+            <button
+              key={skill}
+              className={`filter-pill ${selected.includes(skill) ? "active" : ""}`}
+              onClick={() => toggle(skill)}
+            >
+              {skill}
+            </button>
+          ))}
+          {selected.length > 0 && (
+            <button className="filter-pill clear" onClick={() => setSelected([])}>
+              Clear ✕
+            </button>
+          )}
         </div>
 
-        {/* Expandable filter area */}
-        {filtersOpen && (
-          <div className="filter-section">
-            <div className="filter-container">
-              <h3 className="filter-label">Filter by Technology</h3>
-              <div className="multi-select">
-                {data.map((option) => (
-                  <button
-                    key={option.id}
-                    className={`multi-select-button ${
-                      selected.includes(option.id) ? "selected" : ""
-                    }`}
-                    onClick={() => toggleOption(option.id)}
-                  >
-                    {option.title}
-                  </button>
-                ))}
-              </div>
-            </div>
-          </div>
-        )}
-
-        {/* Projects */}
-        <div className="projects-grid-container">
-          {filteredProjects.length > 0 ? (
-            <div className="projects-grid">
-              {filteredProjects.map((project, idx) => (
-                <article
-                  key={project.id}
-                  className="project-showcase fade-on-scroll"
-                  ref={(el) => (cardsRef.current[idx] = el)}
-                >
-                  <div className="project-cover">
-                    <img src={project.image} alt={project.title} className="cover-image" />
-                    <div className="cover-overlay" />
-                  </div>
-
-                  <div className="project-content">
-                    <h2 className="project-title">{project.title}</h2>
-
-                    <div className="tech-stack">
-                      {project.skills.map((skill) => (
-                        <span
-                          key={skill}
-                          className={`tech-badge ${skill.replace(/\s+/g, "-")}`}
-                        >
-                          {skill}
-                        </span>
-                      ))}
-                    </div>
-
-                    <p className="project-description">{project.descr}</p>
-
-                    <div className="project-meta">
-                      <span className="project-date">{project.date}</span>
-                      <a
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="project-link"
-                      > 
-                      
-                        View Project
-                        <img src={arrow} alt="External link" className="link-icon" />
-                      </a>
-                    </div>
-                  </div>
-                </article>
-              ))}
-            </div>
-          ) : (
-            <div className="no-projects">
-              <img src={catWorking} alt="Cat working" className="no-projects-image" />
-              <p className="no-projects-text">
-                No projects found for the selected technologies.
-              </p>
-            </div>
-          )}
+        {/* Grid */}
+        <div className="projects-archive-grid">
+          {filtered.map((project, idx) => (
+            <ProjectCard key={project.id} project={project} index={idx} />
+          ))}
         </div>
       </div>
 

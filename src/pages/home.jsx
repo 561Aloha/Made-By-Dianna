@@ -1,12 +1,12 @@
 import Intro from '../intro';
-import Featured from '../featured';
-import Tech from '../tech';;
+
+import Tech from '../tech';
+import AboutPreview2 from '../components/AboutPreview2';
 import Footer from '../footer';
 import React, { useEffect, useRef } from "react";
 import '../css/intro.css';
-import UxHome from '../components/uxdesign/projectitems';
-import MainChat from '../components/AI ChatBot/main_chat';
-
+import New from '../components/New'
+import LetsWorkTogether from '../components/LetsWorkTogether';
 function Home() {
     const featuredRef = useRef(null);
     const containerRef = useRef(null);
@@ -33,14 +33,19 @@ function Home() {
             <div className="home-content">
                 <section className="intro-section">
                     <Intro featuredRef={featuredRef} />
+
                 </section>
                 <section className="featured-section" id="featured" ref={featuredRef}>
-                <Featured />
-                </section>
-                <Tech />
+                <div className="featured-sticky">
+                <New />
+                </div>
+    
+                <AboutPreview2/>        
 
+                <LetsWorkTogether/>
+            </section>
             </div>
-            <UxHome/>
+
             <div 
                 onMouseMove={(e) => e.stopPropagation()}
                 onMouseDown={(e) => e.stopPropagation()}
@@ -49,7 +54,7 @@ function Home() {
                 onKeyDown={(e) => e.stopPropagation()}
                 onKeyUp={(e) => e.stopPropagation()}
                 style={{ position: 'relative', zIndex: 10 }}
-                ><MainChat /></div>
+                ></div>
 
             <Footer transparent={true} />
         </div>
