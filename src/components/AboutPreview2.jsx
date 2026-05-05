@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import React, { useEffect, useRef, useState } from "react";
 import me from "../assets/me.jpeg";
-import "./aboutPreview2.css";
+import "./AboutPreview2.css";
 
 const skills = {
   Frontend: [
